@@ -72,3 +72,6 @@ deploy:
   repo: 
     github: https://github.com/loulanyijian/loulanyijian.github.io.git
     branch: master
+
+# avicon.ico 
+favicon: //i1.letvimg.com/lc04_lecloud/201703/15/16/51/favicon.ico
