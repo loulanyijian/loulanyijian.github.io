@@ -16,6 +16,7 @@ tags: [国际化]
 &nbsp;&nbsp;&nbsp;&nbsp;作为老牌的JS日期选择器，my97以稳定、功能全面出名，最近更新时间为2013-12-16，可见有多么的自信。
 &nbsp;&nbsp;&nbsp;&nbsp;97有自带的多语言功能，包括繁体中文、英文、简体中文，多传一个参数即可`onFocus="WdatePicker({lang:'en'})"`
 <img src="http://localhost:4000/images/fanyi8.png" alt="my97datepicker英文版" style="width:50%">
+<!--more-->
 
 #### 1、2 [`laydate`](http://www.layui.com/demo/laydate.html)
 
