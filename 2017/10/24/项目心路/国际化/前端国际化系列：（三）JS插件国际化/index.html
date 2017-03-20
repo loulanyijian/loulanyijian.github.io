@@ -15,17 +15,17 @@
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前面说了js的文案替换，使用le-translate把业务JS代码抽出了，还有我们使用的众多JS插件，各有自己的国际化方法，需要分别对待。
 1、日期插件&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;日期插件，我们使用的有如下几种
 1、1 my97datepicker&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;作为老牌的JS日期选择器，my97以">
-<meta property="og:image" content="http://localhost:4000/images/fanyi8.png">
-<meta property="og:image" content="http://localhost:4000/images/fanyi9.png">
-<meta property="og:image" content="http://localhost:4000/images/fanyi10.png">
-<meta property="og:image" content="http://localhost:4000/images/fanyi11.png">
-<meta property="og:updated_time" content="2017-03-19T10:02:51.000Z">
+<meta property="og:image" content="https://loulanyijian.github.io/images/fanyi8.png">
+<meta property="og:image" content="https://loulanyijian.github.io/images/fanyi9.png">
+<meta property="og:image" content="https://loulanyijian.github.io/images/fanyi10.png">
+<meta property="og:image" content="https://loulanyijian.github.io/images/fanyi11.png">
+<meta property="og:updated_time" content="2017-03-20T07:59:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端国际化系列：（三）JS插件国际化">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前面说了js的文案替换，使用le-translate把业务JS代码抽出了，还有我们使用的众多JS插件，各有自己的国际化方法，需要分别对待。
 1、日期插件&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;日期插件，我们使用的有如下几种
 1、1 my97datepicker&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;作为老牌的JS日期选择器，my97以">
-<meta name="twitter:image" content="http://localhost:4000/images/fanyi8.png">
+<meta name="twitter:image" content="https://loulanyijian.github.io/images/fanyi8.png">
   
     <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
   
@@ -106,12 +106,12 @@
       
         <p>&nbsp;&nbsp;&nbsp;&nbsp;前面说了js的文案替换，使用<code>le-translate</code>把业务JS代码抽出了，还有我们使用的众多JS插件，各有自己的国际化方法，需要分别对待。</p>
 <h3 id="1、日期插件"><a href="#1、日期插件" class="headerlink" title="1、日期插件"></a>1、日期插件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;日期插件，我们使用的有如下几种</p>
-<h4 id="1、1-my97datepicker"><a href="#1、1-my97datepicker" class="headerlink" title="1、1 my97datepicker"></a>1、1 <a href="http://www.my97.net/index.asp" target="_blank" rel="external"><code>my97datepicker</code></a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;作为老牌的JS日期选择器，my97以稳定、功能全面出名，最近更新时间为2013-12-16，可见有多么的自信。<br>&nbsp;&nbsp;&nbsp;&nbsp;97有自带的多语言功能，包括繁体中文、英文、简体中文，多传一个参数即可<code>onFocus=&quot;WdatePicker({lang:&#39;en&#39;})&quot;</code><br><img src="http://localhost:4000/images/fanyi8.png" alt="my97datepicker英文版" style="width:50%"><br><a id="more"></a></p>
+<h4 id="1、1-my97datepicker"><a href="#1、1-my97datepicker" class="headerlink" title="1、1 my97datepicker"></a>1、1 <a href="http://www.my97.net/index.asp" target="_blank" rel="external"><code>my97datepicker</code></a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;作为老牌的JS日期选择器，my97以稳定、功能全面出名，最近更新时间为2013-12-16，可见有多么的自信。<br>&nbsp;&nbsp;&nbsp;&nbsp;97有自带的多语言功能，包括繁体中文、英文、简体中文，多传一个参数即可<code>onFocus=&quot;WdatePicker({lang:&#39;en&#39;})&quot;</code><br><img src="https://loulanyijian.github.io/images/fanyi8.png" alt="my97datepicker英文版" style="width:50%"><br><a id="more"></a></p>
 <h4 id="1、2-laydate"><a href="#1、2-laydate" class="headerlink" title="1、2 laydate"></a>1、2 <a href="http://www.layui.com/demo/laydate.html" target="_blank" rel="external"><code>laydate</code></a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;是一整套UI系统（<a href="http://www.layui.com/" target="_blank" rel="external"><code>layui</code></a>）中的日期插件，不知为何之前有的业务线选择了这个插件，倒是不难看，不过不支持多语言。<br>&nbsp;&nbsp;&nbsp;&nbsp;没办法了，临时换插件，还需要再进行业务调试，也可能会影响整体UI，拿到laydate的源码，将里面的 <code>年</code>、<code>月</code>、<code>日</code>、<code>日期</code>、<code>日期不符合格式，请重新选择</code>等中文提示，都到JS最上面，做成字典表，又多接收一个调用参数，根据参数返回中文或英文。<br>&nbsp;&nbsp;&nbsp;&nbsp;注：laydate功能少不说，还有隐藏的bug，官网一直说要更新也没更新，我们后面的项目，果断抛弃了这个坑货。</p>
-<h4 id="1、3-GRIcalendar"><a href="#1、3-GRIcalendar" class="headerlink" title="1、3 GRIcalendar"></a>1、3 <a href="http://down.admin5.com/demo/code_pop/19/789/" target="_blank" rel="external"><code>GRIcalendar</code></a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;是一个日期范围选择插件，开始日期与结束日期成对出现，十分好使，不过是个个人项目，也没有多语言配置，如处理laydate一样，手动修改一下源码就OK。<br><img src="http://localhost:4000/images/fanyi9.png" alt="GRIcalendar英文改造版" style="width:50%"></p>
-<h3 id="2、在线编辑器"><a href="#2、在线编辑器" class="headerlink" title="2、在线编辑器"></a>2、在线编辑器</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;不同的产品线，使用了kindeditor与ueditor两种编辑器，所幸都是成熟产品，都有自己的国际化，多传参数即可。<br><img src="http://localhost:4000/images/fanyi10.png" alt="ueditor英文版" style="width:70%"></p>
+<h4 id="1、3-GRIcalendar"><a href="#1、3-GRIcalendar" class="headerlink" title="1、3 GRIcalendar"></a>1、3 <a href="http://down.admin5.com/demo/code_pop/19/789/" target="_blank" rel="external"><code>GRIcalendar</code></a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;是一个日期范围选择插件，开始日期与结束日期成对出现，十分好使，不过是个个人项目，也没有多语言配置，如处理laydate一样，手动修改一下源码就OK。<br><img src="https://loulanyijian.github.io/images/fanyi9.png" alt="GRIcalendar英文改造版" style="width:50%"></p>
+<h3 id="2、在线编辑器"><a href="#2、在线编辑器" class="headerlink" title="2、在线编辑器"></a>2、在线编辑器</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;不同的产品线，使用了kindeditor与ueditor两种编辑器，所幸都是成熟产品，都有自己的国际化，多传参数即可。<br><img src="https://loulanyijian.github.io/images/fanyi10.png" alt="ueditor英文版" style="width:70%"></p>
 <h3 id="3、验证插件"><a href="#3、验证插件" class="headerlink" title="3、验证插件"></a>3、验证插件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;我们使用了<code>jQuery Validate</code>这个验证组件，本身就是英文版的，中文版反而是扩展的语言包，可以灵活展示。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">messages: &#123;</div><div class="line">	<span class="attr">required</span>: <span class="string">"This field is required."</span>,</div><div class="line">	<span class="attr">remote</span>: <span class="string">"Please fix this field."</span>,</div><div class="line">	<span class="attr">email</span>: <span class="string">"Please enter a valid email address."</span>,</div><div class="line">	<span class="attr">url</span>: <span class="string">"Please enter a valid URL."</span>,</div><div class="line">	……</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="4、图表组件"><a href="#4、图表组件" class="headerlink" title="4、图表组件"></a>4、图表组件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;图表我们使用了echart，普通的图表，如柱状图、折线图做国际化，只需将传入的X、Y轴坐标等配置信息修改成英文即可。<br>&nbsp;&nbsp;&nbsp;&nbsp;但是我们业务线还有国内流量、带宽、用户分布图，展示不同省份的分部情况，这样的话，需要将国内地图，修改成美国地图，展示美国不同州的统计情况。<br>&nbsp;&nbsp;&nbsp;&nbsp;直接按照echart的官网北美地图示例配置即可。<br><img src="http://localhost:4000/images/fanyi11.png" alt="echart北美地图demo" style="width:70%"></p>
+<h3 id="4、图表组件"><a href="#4、图表组件" class="headerlink" title="4、图表组件"></a>4、图表组件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;图表我们使用了echart，普通的图表，如柱状图、折线图做国际化，只需将传入的X、Y轴坐标等配置信息修改成英文即可。<br>&nbsp;&nbsp;&nbsp;&nbsp;但是我们业务线还有国内流量、带宽、用户分布图，展示不同省份的分部情况，这样的话，需要将国内地图，修改成美国地图，展示美国不同州的统计情况。<br>&nbsp;&nbsp;&nbsp;&nbsp;直接按照echart的官网北美地图示例配置即可。<br><img src="https://loulanyijian.github.io/images/fanyi11.png" alt="echart北美地图demo" style="width:70%"></p>
 <h3 id="5、其余不需要国际化的第三方插件"><a href="#5、其余不需要国际化的第三方插件" class="headerlink" title="5、其余不需要国际化的第三方插件"></a>5、其余不需要国际化的第三方插件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;其余的很多第三方JS插件，例如上传使用的webuploader、优化单选多选框的icheck、模板引擎artTemplate、全屏插件fullpage.js、幻灯片插件swiper等等，无需要专门传入语言参数或修改源码，要么直接没有中文的元素，要么直接在使用的过程中，像修改业务JS代码一样，使用LCT()或翻译字典key-value形式做国际化处理。</p>
 <h3 id="6、自己开发的JS插件"><a href="#6、自己开发的JS插件" class="headerlink" title="6、自己开发的JS插件"></a>6、自己开发的JS插件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;我们项目组自己开发的JS插件众多，包括列表组件、分页组件、弹窗组件、下拉组件等，很多需要国际化的，这样的话，自己修改源码就好，思路如下：</p>
 <ul>
@@ -124,7 +124,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loulanyijian.github.io/2017/10/24/项目心路/国际化/前端国际化系列：（三）JS插件国际化/" data-id="cj0hhh3gy000kjyc26x2zagav" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+      <a data-url="https://loulanyijian.github.io/2017/10/24/项目心路/国际化/前端国际化系列：（三）JS插件国际化/" data-id="cj0htm1pj001uw9c2ue0j4srr" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       
