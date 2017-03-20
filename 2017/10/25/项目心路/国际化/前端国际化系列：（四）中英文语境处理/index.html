@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端国际化系列：（四）中英文语境处理 | 楼兰一剑的道场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在国际化进程中，发现了很多需要处理中英文不同语境的问题，仅仅汉译英是不够的。
+1、日期格式修改&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在处理JS日期插件的时候，发现了一个问题，国内的日期显示，与国外的显示，有大大的区别。
+1、1 星期的显示&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;国内的显示是周一、周二、周三，而国外的是Mon、Tue、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端国际化系列：（四）中英文语境处理">
+<meta property="og:url" content="https://loulanyijian.github.io/2017/10/25/项目心路/国际化/前端国际化系列：（四）中英文语境处理/index.html">
+<meta property="og:site_name" content="楼兰一剑的道场">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在国际化进程中，发现了很多需要处理中英文不同语境的问题，仅仅汉译英是不够的。
+1、日期格式修改&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在处理JS日期插件的时候，发现了一个问题，国内的日期显示，与国外的显示，有大大的区别。
+1、1 星期的显示&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;国内的显示是周一、周二、周三，而国外的是Mon、Tue、">
+<meta property="og:updated_time" content="2017-03-19T13:37:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端国际化系列：（四）中英文语境处理">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在国际化进程中，发现了很多需要处理中英文不同语境的问题，仅仅汉译英是不够的。
+1、日期格式修改&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在处理JS日期插件的时候，发现了一个问题，国内的日期显示，与国外的显示，有大大的区别。
+1、1 星期的显示&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;国内的显示是周一、周二、周三，而国外的是Mon、Tue、">
+  
+    <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">楼兰一剑的道场</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">施主，请留步……</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://loulanyijian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-项目心路/国际化/前端国际化系列：（四）中英文语境处理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/25/项目心路/国际化/前端国际化系列：（四）中英文语境处理/" class="article-date">
+  <time datetime="2017-10-25T10:02:34.000Z" itemprop="datePublished">2017-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/项目心路/">项目心路</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端国际化系列：（四）中英文语境处理
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;在国际化进程中，发现了很多需要处理中英文不同语境的问题，仅仅汉译英是不够的。</p>
+<h3 id="1、日期格式修改"><a href="#1、日期格式修改" class="headerlink" title="1、日期格式修改"></a>1、日期格式修改</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;在处理JS日期插件的时候，发现了一个问题，国内的日期显示，与国外的显示，有大大的区别。</p>
+<h4 id="1、1-星期的显示"><a href="#1、1-星期的显示" class="headerlink" title="1、1 星期的显示"></a>1、1 星期的显示</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;国内的显示是周一、周二、周三，而国外的是Mon、Tue、Wed，是英文的缩写，并且是固定的用法，在修改日期插件源码的时候，从my97插件里面拷贝了英文周显示的数组，统一了展示。<br><a id="more"></a></p>
+<h4 id="1、2-年月日字符串的展示"><a href="#1、2-年月日字符串的展示" class="headerlink" title="1、2 年月日字符串的展示"></a>1、2 年月日字符串的展示</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;很多显示年月日日期的地方，我们有两种展示方式，第一种如 <code>2016-09-10</code> 形式的，另一种是 <code>2016年9月10日</code>的，本以为可以把后面的统一成前面的，就OK了，结果查阅了一下英文网站与咨询了一下在美国留学的同学，国外的日期展示方式，均应为 <code>Sep 10，2016</code>，<br>好吧，那就修改格式化日期的工具类，还是参照了my97的代码，统一展示了年月日。</p>
+<h4 id="1、3-带时分秒日期的展示"><a href="#1、3-带时分秒日期的展示" class="headerlink" title="1、3 带时分秒日期的展示"></a>1、3 带时分秒日期的展示</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;国外的日期，不会像国内一样，展示24小时制的 <code>19:30:00</code>，而是会展示 <code>07:30:00 PM</code>，会把AM（上午）、PM（下午）同时展示。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;格式化日期的工具类可以完成了，是单独处理英文的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">formatDateEn: <span class="function"><span class="keyword">function</span>(<span class="params">d, type</span>) </span>&#123;</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * 支持格式：年月日格式：march 8,2016</div><div class="line">	 *         年月日 时分格式：march 8,2016 PM 02:48</div><div class="line">	 *         年月日 时分秒格式：march 8,2016 PM 02:48:12</div><div class="line">	 * type: 不传时，返回年月日</div><div class="line">	 * 	 传m时，返回年月日，时分</div><div class="line">	 * 	 传s时，返回年月日，时分秒</div><div class="line">	 */</div><div class="line">	<span class="keyword">var</span> s = <span class="string">""</span>;</div><div class="line">	<span class="keyword">var</span> lang = &#123;</div><div class="line">		<span class="attr">aWeekStr</span>: [<span class="string">"wk"</span>, <span class="string">"Sun"</span>, <span class="string">"Mon"</span>, <span class="string">"Tue"</span>, <span class="string">"Wed"</span>, <span class="string">"Thu"</span>, <span class="string">"Fri"</span>, <span class="string">"Sat"</span>],</div><div class="line">		<span class="attr">aMonStr</span>: [<span class="string">"Jan"</span>, <span class="string">"Feb"</span>, <span class="string">"Mar"</span>, <span class="string">"Apr"</span>, <span class="string">"May"</span>, <span class="string">"Jun"</span>, <span class="string">"Jul"</span>, <span class="string">"Aug"</span>, <span class="string">"Sep"</span>, <span class="string">"Oct"</span>, <span class="string">"Nov"</span>, <span class="string">"Dec"</span>],</div><div class="line">	&#125;;</div><div class="line">	<span class="keyword">var</span> now = d ? <span class="keyword">new</span> <span class="built_in">Date</span>(d) : <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">	<span class="keyword">var</span> year = now.getFullYear();</div><div class="line">	<span class="keyword">var</span> month = now.getMonth();</div><div class="line">	<span class="keyword">var</span> date = now.getDate();</div><div class="line">	<span class="keyword">var</span> hour = now.getHours();</div><div class="line">	<span class="keyword">var</span> minute = now.getMinutes();</div><div class="line">	<span class="keyword">var</span> second = now.getSeconds();</div><div class="line">	date = date &lt; <span class="number">10</span> ? <span class="string">"0"</span> + date : date;</div><div class="line">	hour = hour &lt; <span class="number">10</span> ? <span class="string">"0"</span> + hour : hour;</div><div class="line">	minute = minute &lt; <span class="number">10</span> ? <span class="string">"0"</span> + minute : minute;</div><div class="line">	second = second &lt; <span class="number">10</span> ? <span class="string">"0"</span> + second : second;</div><div class="line">	s = hour &gt; <span class="number">12</span> ? <span class="string">"PM"</span> : <span class="string">"AM"</span>;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (!type) &#123;</div><div class="line">		<span class="keyword">return</span> lang.aMonStr[month] + <span class="string">" "</span> + date + <span class="string">", "</span> + year;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="string">"m"</span>) &#123;</div><div class="line">		<span class="keyword">return</span> lang.aMonStr[month] + <span class="string">" "</span> + date + <span class="string">", "</span> + year  + <span class="string">" "</span> + hour + <span class="string">":"</span> + minute+ <span class="string">" "</span> + s;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="string">"s"</span>) &#123;</div><div class="line">		<span class="keyword">return</span> lang.aMonStr[month] + <span class="string">" "</span> + date + <span class="string">", "</span> + year + <span class="string">"&lt;br&gt;"</span> + hour + <span class="string">":"</span> + minute + <span class="string">":"</span> + second + <span class="string">" "</span> + s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="1、4-时区的展示"><a href="#1、4-时区的展示" class="headerlink" title="1、4 时区的展示"></a>1、4 时区的展示</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;我们的某个产品线，与时间有紧密的关系，需要展示在顶部时区，这个通过JS的 <code>new Date().getTimezoneOffset()</code>方法即可获取。<br>时区的展示，找几个类似于苹果系统、Windows系统等有不同时区展示的字典表即可。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">getTimeZone: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> timeZoneArr = [<span class="string">'utc-12 夸贾林岛'</span>,<span class="string">'utc-11 萨摩亚'</span>,<span class="string">'utc-10 夏威夷'</span>,<span class="string">'utc-9 阿拉斯加'</span>,<span class="string">'utc-8 太平洋时间(美国和加拿大)'</span>,<span class="string">'utc-7 山地时间(美国和加拿大)'</span>,<span class="string">'utc-6 中部时间(美国和加拿大)'</span>,<span class="string">'utc-5 东部时间(美国和加拿大)'</span>,<span class="string">'utc-4：30 加拉加斯'</span>,<span class="string">'utc-4 大西洋时间（加拿大）'</span>,<span class="string">'utc-3：30 纽芬兰'</span>,<span class="string">'utc-3 萨尔瓦多'</span>,<span class="string">'utc-2 中大西洋'</span>,<span class="string">'utc-1 亚速尔群岛'</span>,<span class="string">'utc 英国'</span>,<span class="string">'utc+1 柏林、法国、丹麦'</span>,<span class="string">'utc+2 罗马、巴勒斯坦、希腊'</span>,<span class="string">'utc+3 科威特'</span>,<span class="string">'utc+4 毛里求斯'</span>,<span class="string">'utc+5 印度'</span>,<span class="string">'utc+6 缅甸、尼泊尔'</span>,<span class="string">'utc+6：30 仰光'</span>,<span class="string">'utc+7 曼谷'</span>,<span class="string">'utc+8 北京'</span>,<span class="string">'utc+9 首尔'</span>,<span class="string">'utc+9：30 达尔文'</span>,<span class="string">'utc+10 澳大利亚'</span>,<span class="string">'utc+11 所罗门群岛'</span>,<span class="string">'utc+12 新西兰'</span>,<span class="string">'utc+13 努库阿洛法'</span>,<span class="string">'utc+14 圣诞岛'</span>];</div><div class="line">	<span class="keyword">var</span> timeZoneArrEn = [<span class="string">'utc-12 夸贾林岛'</span>,<span class="string">'utc-11 萨摩亚'</span>,<span class="string">'utc-10 夏威夷'</span>,<span class="string">'utc-9 阿拉斯加'</span>,<span class="string">'utc-8 太平洋时间(美国和加拿大)'</span>,<span class="string">'utc-7 山地时间(美国和加拿大)'</span>,<span class="string">'utc-6 中部时间(美国和加拿大)'</span>,<span class="string">'utc-5 东部时间(美国和加拿大)'</span>,<span class="string">'utc-4：30 加拉加斯'</span>,<span class="string">'utc-4 大西洋时间（加拿大）'</span>,<span class="string">'utc-3：30 纽芬兰'</span>,<span class="string">'utc-3 萨尔瓦多'</span>,<span class="string">'utc-2 中大西洋'</span>,<span class="string">'utc-1 亚速尔群岛'</span>,<span class="string">'utc 英国'</span>,<span class="string">'utc+1 柏林、法国、丹麦'</span>,<span class="string">'utc+2 罗马、巴勒斯坦、希腊'</span>,<span class="string">'utc+3 科威特'</span>,<span class="string">'utc+4 毛里求斯'</span>,<span class="string">'utc+5 印度'</span>,<span class="string">'utc+6 缅甸、尼泊尔'</span>,<span class="string">'utc+6：30 仰光'</span>,<span class="string">'utc+7 曼谷'</span>,<span class="string">'utc+8 Beijing'</span>,<span class="string">'utc+9 首尔'</span>,<span class="string">'utc+9：30 达尔文'</span>,<span class="string">'utc+10 澳大利亚'</span>,<span class="string">'utc+11 所罗门群岛'</span>,<span class="string">'utc+12 新西兰'</span>,<span class="string">'utc+13 努库阿洛法'</span>,<span class="string">'utc+14 圣诞岛'</span>];</div><div class="line">	<span class="keyword">var</span> zeroZone = <span class="string">"utc 英国"</span>;</div><div class="line">	<span class="keyword">var</span> zeroZoneEn = <span class="string">"utc britain"</span>;</div><div class="line">	<span class="keyword">if</span>(lctu.getLanguage() == <span class="string">"en"</span>)&#123;</div><div class="line">		timeZoneArr = timeZoneArrEn;</div><div class="line">		zeroZone = zeroZoneEn;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//获取当前时区</span></div><div class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">	<span class="keyword">var</span> str = <span class="string">""</span>;</div><div class="line">	<span class="keyword">var</span> p = d.getTimezoneOffset();</div><div class="line">	<span class="comment">// var p = 360;</span></div><div class="line">	<span class="keyword">if</span>(p == <span class="number">0</span>)&#123;</div><div class="line">		<span class="keyword">return</span> zeroZone;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">var</span> dd = p / <span class="number">60</span>;</div><div class="line">	dd = <span class="number">0</span>-dd;</div><div class="line">	dd = dd &gt;<span class="number">0</span>?<span class="string">"+"</span>+dd:dd;</div><div class="line">	<span class="keyword">var</span> i = <span class="number">0</span>,j=<span class="number">-1</span>;</div><div class="line">	<span class="keyword">for</span>(;i&lt;timeZoneArr.length;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(timeZoneArr[i].indexOf(dd+<span class="string">" "</span>)&gt;<span class="number">-1</span>)&#123;</div><div class="line">			j=i;<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> timeZoneArr[j];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2、中英文字符的限制"><a href="#2、中英文字符的限制" class="headerlink" title="2、中英文字符的限制"></a>2、中英文字符的限制</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;我们saas建立app的输入框，限制字数为5，一般来说，一个app的名称，5个汉字足够了，多了也展示不开。<br>&nbsp;&nbsp;&nbsp;&nbsp;但是也限制了5个英文，这就不够了，5个英文字符，连一个单词可能都拼不完。<br>&nbsp;&nbsp;&nbsp;&nbsp;所以，包括这个输入框，我们很多的输入框，都修改了字数限制，比如限制10个字符，中文算2个字符，英文算1个，可以解决这个产品问题。<br>&nbsp;&nbsp;&nbsp;&nbsp;只是之前通过input自带的<code>maxlenth</code>来限制输入，现在就不够了，还得单独写JS进行验证。</p>
+<h3 id="3、英语翻译的多样性与语法倒装"><a href="#3、英语翻译的多样性与语法倒装" class="headerlink" title="3、英语翻译的多样性与语法倒装"></a>3、英语翻译的多样性与语法倒装</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;同样的中文单词，可以翻译成多个英文单词，这个需要具体产品线的产品经理对翻译之后的界面进行阅读校对，调整单词。<br>&nbsp;&nbsp;&nbsp;&nbsp;中文单词，是不区分大小写的，英文的话，都是区分大小写，例如菜单，全部是大写字母开头，而在普通文案中，应当是全部小写，oh，这又得额外处理。<br>&nbsp;&nbsp;&nbsp;&nbsp;同样一句话，中文可能是正序，英文的话，可能就需要倒装才能表达完全的意思，这个也得注意。</p>
+<h3 id="4、英文的单复数处理"><a href="#4、英文的单复数处理" class="headerlink" title="4、英文的单复数处理"></a>4、英文的单复数处理</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;这个主要体现在页码上，我们之前的分页插件，是<code>共N条，每页显示M条</code>，翻译了之后，就是<code>Total N items, M items per page</code>，我看着是没啥问题，集团来自危地马拉的国际化负责人，告诉我们，不能这么展示，如果N是1的话，需要展示成<code>Total N item</code>，如果N大于1的话，需要展示成<code>Total N items</code>，这样才符合英文的语法与阅读习惯。<br>&nbsp;&nbsp;&nbsp;&nbsp;尼玛，还得这样，我投机取巧了一下，改成了<code>Total N item(s)</code>，被告知，也是不行的，无奈之下，只能做JS判断了。</p>
+<h3 id="5、其余语境处理"><a href="#5、其余语境处理" class="headerlink" title="5、其余语境处理"></a>5、其余语境处理</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;我们在做英文版的时候，还考虑了香港与台湾版，我本以为香港与台湾的是一样的繁体版，实则不然，两者的繁体还不是一样，很多词语的使用也是不一样的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2017/10/25/项目心路/国际化/前端国际化系列：（四）中英文语境处理/" data-id="cj0hhh3hb0011jyc2qhq50ujt" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/26/项目心路/国际化/前端国际化系列：（五）css样式修改/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新文章</strong>
+      <div class="article-nav-title">
+        
+          前端国际化系列：（五）css样式修改
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/24/项目心路/国际化/前端国际化系列：（三）JS插件国际化/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更早文章</strong>
+      <div class="article-nav-title">前端国际化系列：（三）JS插件国际化</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/10/25/项目心路/国际化/前端国际化系列：（四）中英文语境处理/" data-title="前端国际化系列：（四）中英文语境处理" data-url="https://loulanyijian.github.io/2017/10/25/项目心路/国际化/前端国际化系列：（四）中英文语境处理/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/vue实践/">vue实践</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/交互心得/">交互心得</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端工具/">前端工具</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端规范/">前端规范</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目心路/">项目心路</a><span class="category-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/chrome、npm/" style="font-size: 10px;">chrome、npm</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/vue/" style="font-size: 16.67px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/vue-loader/" style="font-size: 10px;">vue-loader</a> <a href="/tags/webpack/" style="font-size: 13.33px;">webpack</a> <a href="/tags/交互/" style="font-size: 13.33px;">交互</a> <a href="/tags/国际化/" style="font-size: 20px;">国际化</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/搜索框/" style="font-size: 10px;">搜索框</a> <a href="/tags/规范/" style="font-size: 13.33px;">规范</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/31/项目心路/国际化/前端国际化系列：（十）总结/">前端国际化系列：（十）总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/30/项目心路/国际化/前端国际化系列：（九）域名适配与部署/">前端国际化系列：（九）域名适配与部署</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/29/项目心路/国际化/前端国际化系列：（八）国际手机号码处理/">前端国际化系列：（八）国际手机号码处理</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/28/项目心路/国际化/前端国际化系列：（七）第三方登录/">前端国际化系列：（七）第三方登录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/27/项目心路/国际化/前端国际化系列：（六）第三方分享/">前端国际化系列：（六）第三方分享</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhaosd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
