@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端国际化系列：（二）获取语言环境 | 楼兰一剑的道场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上一篇介绍文案替换，文案替换完成了，但是具体要展示中文or英文，对前端来说，需要处理两种情景。
+1、显示英文html&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们有的产品线，做了前后端分离，html由前端部署，这样的话，在上午已经介绍，我们使用代码，生成了英文版的html，跟后台协调了一下，根据产品线的不同，分为两种方式部署。
+
+1、与中文界面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端国际化系列：（二）获取语言环境">
+<meta property="og:url" content="https://loulanyijian.github.io/2016/10/23/项目心路/国际化/前端国际化系列：（二）获取语言环境/index.html">
+<meta property="og:site_name" content="楼兰一剑的道场">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上一篇介绍文案替换，文案替换完成了，但是具体要展示中文or英文，对前端来说，需要处理两种情景。
+1、显示英文html&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们有的产品线，做了前后端分离，html由前端部署，这样的话，在上午已经介绍，我们使用代码，生成了英文版的html，跟后台协调了一下，根据产品线的不同，分为两种方式部署。
+
+1、与中文界面">
+<meta property="og:updated_time" content="2017-03-20T08:43:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端国际化系列：（二）获取语言环境">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上一篇介绍文案替换，文案替换完成了，但是具体要展示中文or英文，对前端来说，需要处理两种情景。
+1、显示英文html&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们有的产品线，做了前后端分离，html由前端部署，这样的话，在上午已经介绍，我们使用代码，生成了英文版的html，跟后台协调了一下，根据产品线的不同，分为两种方式部署。
+
+1、与中文界面">
+  
+    <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">楼兰一剑的道场</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">施主，请留步……</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://loulanyijian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-项目心路/国际化/前端国际化系列：（二）获取语言环境" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/23/项目心路/国际化/前端国际化系列：（二）获取语言环境/" class="article-date">
+  <time datetime="2016-10-23T08:02:34.000Z" itemprop="datePublished">2016-10-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/项目心路/">项目心路</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端国际化系列：（二）获取语言环境
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;上一篇介绍文案替换，文案替换完成了，但是具体要展示中文or英文，对前端来说，需要处理两种情景。</p>
+<h3 id="1、显示英文html"><a href="#1、显示英文html" class="headerlink" title="1、显示英文html"></a>1、显示英文html</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;我们有的产品线，做了前后端分离，html由前端部署，这样的话，在上午已经介绍，我们使用代码，生成了英文版的html，跟后台协调了一下，根据产品线的不同，分为两种方式部署。</p>
+<ul>
+<li>1、与中文界面使用同一个域名，只多了一层 en/目录<br>  我们界面嵌入的css、js地址，都是cdn上的绝对地址，这个直接上传到固定地址就OK了，不需要改动太多。<br>  如果有相对地址的css、js，那就需要在相对地址上，多一层../了</li>
+<li>2、英文系统使用单独的域名<a id="more"></a>
+  如之前某个系统的中文版域名为<code>xx.lecloud.com</code>，现在部署一个英文版，域名为<code>usxx.lecloud.com</code><br>  这样也需要具体分析css、js地址的依赖，绝对地址就不用管了，相对地址的话，需要把全部的静态文件都新部署一遍。</li>
+</ul>
+<h3 id="2、JS动态显示"><a href="#2、JS动态显示" class="headerlink" title="2、JS动态显示"></a>2、JS动态显示</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;英文版、中文版，都需要嵌入我们相同的JS，所以，要获取当前的语言环境，我写了一个LCTU的工具类，暴露了一个<code>getLanguage</code>的全局方法，用于获取语言版本。<br>&nbsp;&nbsp;&nbsp;&nbsp;因为产品线众多，而且一开始没拍板如何部署英文的系统，我做了四种方式的兼容</p>
+<ul>
+<li>根据域名判断<br>  我们的北美英文版的域名，是以us开头的，我只需要判断<code>location.hostname.indexOf(&#39;us&#39;) === 0</code>即可</li>
+<li>根据参数判断<br>  如<code>http://xx.lecloud.com</code>是中文版，<code>http://xx.lecloud.com?language=en</code>为英文版，我拿到这个参数即可</li>
+<li>根据cookie判断<br>  取当前域的<code>language</code>key值的cookie，无或者值为zh-CN的话，是中文版，en就是英文版了</li>
+<li>根据url路径判断<br>  如<code>http://xx.lecloud.com</code>是中文版,<code>http://xx.lecloud.com/en</code>是英文文版</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;具体代码如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">getLanguage: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="comment">// return "en";</span></div><div class="line">	<span class="keyword">var</span> langArr = [<span class="string">"zh_cn"</span>, <span class="string">"en"</span>, <span class="string">"zh_tw"</span>];</div><div class="line">	<span class="comment">//获取当前的语言环境</span></div><div class="line">	<span class="comment">//0.取域名首位数，北美的为us</span></div><div class="line">	<span class="comment">//1.根据url关键字获取,关键字：language</span></div><div class="line">	<span class="comment">//2.根据cookie获取，关键字:language</span></div><div class="line">	<span class="comment">//3.根据url路径获取</span></div><div class="line">	<span class="comment">//4.保留功能，通过浏览器语言版本选择</span></div><div class="line"></div><div class="line">	<span class="keyword">var</span> language = <span class="string">"zh_cn"</span>,</div><div class="line">		temp = <span class="string">""</span>;</div><div class="line">	<span class="keyword">if</span> (<span class="built_in">window</span>.location.hostname.indexOf(<span class="string">"us"</span>) === <span class="number">0</span>) &#123;</div><div class="line">		language = <span class="string">"en"</span>;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp = getQueryString(<span class="string">"language"</span>)) &#123;</div><div class="line">		<span class="keyword">if</span> (langArr.indexOf(temp) &gt; <span class="number">-1</span>) &#123;</div><div class="line">			language = temp;</div><div class="line">		&#125;</div><div class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp = getCookieByKey(<span class="string">"language"</span>)) &#123;</div><div class="line">		<span class="keyword">if</span> (langArr.indexOf(temp) &gt; <span class="number">-1</span>) &#123;</div><div class="line">			language = temp;</div><div class="line">		&#125;</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		language = getLanguageByPath();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> language;</div><div class="line">	……</div></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;考虑到cookie、path、参数的操作风险性与商业价值，后来大部分的业务线，使用了北美单独的域名，以us开头的，OK，那就是使用第一种方法就OK了，不过，我还保留了通过url关键字获取的方式，用于测试环境上调试中英文版本。</p>
+<h3 id="3、自定义的域名"><a href="#3、自定义的域名" class="headerlink" title="3、自定义的域名"></a>3、自定义的域名</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;上面的代码，本来以为可以处理全部的情况，后来发现还少了一种情景，我们有一个saas的业务线，客户可以使用我们的saas系统，配置自己的网站，也可以解析到自己的域名上，这样的话，以上四种方式，一下子都不适合了。<br>&nbsp;&nbsp;&nbsp;&nbsp;没办法，我跟后台协商了一下，使用saas英文业务线生成的网站，会在每个界面上，存一个<code>local_area</code>的全局变量，简单粗暴的解决了问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> local_area == <span class="string">"string"</span> &amp;&amp; local_area == <span class="string">"us"</span>)&#123;</div><div class="line">	……</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="4、多考虑的"><a href="#4、多考虑的" class="headerlink" title="4、多考虑的"></a>4、多考虑的</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;后来使用着国外的vpn逛天猫的时候，发现天猫直接跳转到了国际版，这个根据dns判断一下，倒是很简单。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2016/10/23/项目心路/国际化/前端国际化系列：（二）获取语言环境/" data-id="cj0hv5g560021e4c2lv19t2bv" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/24/项目心路/国际化/前端国际化系列：（三）JS插件国际化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新文章</strong>
+      <div class="article-nav-title">
+        
+          前端国际化系列：（三）JS插件国际化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/22/项目心路/国际化/前端国际化系列：（一）汉字翻译与替换/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更早文章</strong>
+      <div class="article-nav-title">前端国际化系列：（一）汉字翻译与替换</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="2016/10/23/项目心路/国际化/前端国际化系列：（二）获取语言环境/" data-title="前端国际化系列：（二）获取语言环境" data-url="https://loulanyijian.github.io/2016/10/23/项目心路/国际化/前端国际化系列：（二）获取语言环境/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/vue实践/">vue实践</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/交互心得/">交互心得</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端工具/">前端工具</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端规范/">前端规范</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术大杂烩/">技术大杂烩</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目心路/">项目心路</a><span class="category-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/chrome/" style="font-size: 12.5px;">chrome</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/nginx/" style="font-size: 12.5px;">nginx</a> <a href="/tags/npm/" style="font-size: 12.5px;">npm</a> <a href="/tags/nuxt/" style="font-size: 10px;">nuxt</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/vue-loader/" style="font-size: 10px;">vue-loader</a> <a href="/tags/vue-router/" style="font-size: 12.5px;">vue-router</a> <a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/交互/" style="font-size: 12.5px;">交互</a> <a href="/tags/国际化/" style="font-size: 17.5px;">国际化</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/搜索框/" style="font-size: 10px;">搜索框</a> <a href="/tags/规范/" style="font-size: 12.5px;">规范</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/23/前端工具/前端工具集合/">前端工具集合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/前端工具/前端常用chrome扩展程序/">前端常用chrome扩展程序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/前端工具/前端常用npm全局包/">前端常用npm全局包</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/前端工具/sublime插件推荐/">sublime插件推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/18/前端工具/mac前端环境搭建与常用软件/">Mac前端环境搭建与常用软件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhaosd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
