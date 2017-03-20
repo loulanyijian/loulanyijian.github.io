@@ -1,6 +1,6 @@
 ---
 title: 前端国际化系列：（三）JS插件国际化
-date: 2017-10-24 17:02:34
+date: 2016-10-24 17:02:34
 categories: 项目心路
 tags: [国际化]
 ---
@@ -15,7 +15,7 @@ tags: [国际化]
 
 &nbsp;&nbsp;&nbsp;&nbsp;作为老牌的JS日期选择器，my97以稳定、功能全面出名，最近更新时间为2013-12-16，可见有多么的自信。
 &nbsp;&nbsp;&nbsp;&nbsp;97有自带的多语言功能，包括繁体中文、英文、简体中文，多传一个参数即可`onFocus="WdatePicker({lang:'en'})"`
-<img src="http://localhost:4000/images/fanyi8.png" alt="my97datepicker英文版" style="width:50%">
+<img src="https://loulanyijian.github.io/images/fanyi8.png" alt="my97datepicker英文版" style="width:50%">
 <!--more-->
 
 #### 1、2 [`laydate`](http://www.layui.com/demo/laydate.html)
@@ -27,12 +27,12 @@ tags: [国际化]
 #### 1、3 [`GRIcalendar`](http://down.admin5.com/demo/code_pop/19/789/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;是一个日期范围选择插件，开始日期与结束日期成对出现，十分好使，不过是个个人项目，也没有多语言配置，如处理laydate一样，手动修改一下源码就OK。
-<img src="http://localhost:4000/images/fanyi9.png" alt="GRIcalendar英文改造版" style="width:50%">
+<img src="https://loulanyijian.github.io/images/fanyi9.png" alt="GRIcalendar英文改造版" style="width:50%">
 
 ### 2、在线编辑器
 
 &nbsp;&nbsp;&nbsp;&nbsp;不同的产品线，使用了kindeditor与ueditor两种编辑器，所幸都是成熟产品，都有自己的国际化，多传参数即可。
-<img src="http://localhost:4000/images/fanyi10.png" alt="ueditor英文版" style="width:70%">
+<img src="https://loulanyijian.github.io/images/fanyi10.png" alt="ueditor英文版" style="width:70%">
 
 ### 3、验证插件
 &nbsp;&nbsp;&nbsp;&nbsp;我们使用了`jQuery Validate`这个验证组件，本身就是英文版的，中文版反而是扩展的语言包，可以灵活展示。
@@ -50,7 +50,7 @@ messages: {
 &nbsp;&nbsp;&nbsp;&nbsp;图表我们使用了echart，普通的图表，如柱状图、折线图做国际化，只需将传入的X、Y轴坐标等配置信息修改成英文即可。
 &nbsp;&nbsp;&nbsp;&nbsp;但是我们业务线还有国内流量、带宽、用户分布图，展示不同省份的分部情况，这样的话，需要将国内地图，修改成美国地图，展示美国不同州的统计情况。
 &nbsp;&nbsp;&nbsp;&nbsp;直接按照echart的官网北美地图示例配置即可。
-<img src="http://localhost:4000/images/fanyi11.png" alt="echart北美地图demo" style="width:70%">
+<img src="https://loulanyijian.github.io/images/fanyi11.png" alt="echart北美地图demo" style="width:70%">
 
 ### 5、其余不需要国际化的第三方插件
 &nbsp;&nbsp;&nbsp;&nbsp;其余的很多第三方JS插件，例如上传使用的webuploader、优化单选多选框的icheck、模板引擎artTemplate、全屏插件fullpage.js、幻灯片插件swiper等等，无需要专门传入语言参数或修改源码，要么直接没有中文的元素，要么直接在使用的过程中，像修改业务JS代码一样，使用LCT()或翻译字典key-value形式做国际化处理。

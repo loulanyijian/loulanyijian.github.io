@@ -24,7 +24,7 @@ tags: [chrome]
 
 ### 4、[二维码插件](https://chrome.google.com/webstore/detail/%E4%BA%8C%E7%BB%B4%E7%A0%81qr%E7%A0%81%E7%94%9F%E6%88%90%E5%99%A8qr-code-generato/pflgjjogbmmcmfhfcnlohagkablhbpmg?hl=zh-CN)
 &nbsp;&nbsp;&nbsp;&nbsp;点击生成当前界面url的二维码，方便移动设备扫描访问。
-<img src="http://localhost:4000/images/qrcode.webp" alt="二维码" style="width:70%">
+<img src="https://loulanyijian.github.io/images/qrcode.webp" alt="二维码" style="width:70%">
 
 ### 5、[axure chrome支持](https://chrome.google.com/webstore/detail/axure-rp-extension-for-ch/dogkpdfcklifaemcdfbildhcofnopogp?hl=zh-CN)
 &nbsp;&nbsp;&nbsp;&nbsp;chrome默认是不支持axure打开原型的，安装一个扩展即可。
@@ -36,7 +36,7 @@ tags: [chrome]
 
 ### 7、[WEB前端助手(FeHelper)](https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad/related?hl=zh-CN)
 &nbsp;&nbsp;&nbsp;&nbsp;前端格式化工具类集合
-<img src="http://localhost:4000/images/FeHelper.webp" alt="二维码" style="width:70%">
+<img src="https://loulanyijian.github.io/images/FeHelper.webp" alt="二维码" style="width:70%">
 
 ### 8、总结
 chrome还有很多与前端有关系的扩展程序，例如颜色获取、尺寸量取、字体变换、数据请求（postman）等，不过使用量不如上面几个，普及程度不大，在此不一一介绍。

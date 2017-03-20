@@ -1,11 +1,11 @@
 ---
 title: Mac前端环境搭建与常用软件
-date: 2017-03-19 15:02:34
+date: 2017-03-18 15:02:34
 categories: 前端工具
 tags: [Mac]
 ---
 
-&nbsp;&nbsp;&nbsp;&nbsp;最近，在我的大力鼓吹下，我们组的同学们，都陆续申请到了mac电脑，鸟枪换炮了，然后给他们好几个人都挨个讲了一遍Mac的使用、常用软件等等，费劲口舌，现在总结一下，再来新人的话，直接拿文档去怼他。(也可以参考[前端工具集合-本站](http://localhost:4000/2017/03/23/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/))
+&nbsp;&nbsp;&nbsp;&nbsp;最近，在我的大力鼓吹下，我们组的同学们，都陆续申请到了mac电脑，鸟枪换炮了，然后给他们好几个人都挨个讲了一遍Mac的使用、常用软件等等，费劲口舌，现在总结一下，再来新人的话，直接拿文档去怼他。(也可以参考[前端工具集合-本站](https://loulanyijian.github.io/2017/03/23/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/))
 
 ### 1、旧电脑备份
 &nbsp;&nbsp;&nbsp;&nbsp;在拿到Mac电脑之后，Windows电脑需要还回去，所以需要做好备份
@@ -47,7 +47,7 @@ tags: [Mac]
 * 登录上`APP Store`，开始下载程序
 
 ### 3、下载安装常用程序
-* 首先下载chrome，需要通过Safari下载。然后安装chrome扩展工具([前端常用chrome扩展程序-本站](http://localhost:4000/2017/03/22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/))
+* 首先下载chrome，需要通过Safari下载。然后安装chrome扩展工具([前端常用chrome扩展程序-本站](https://loulanyijian.github.io/2017/03/22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F/))
 * 通过APP Store或者chrome，下载相关程序
 * 输入法——推荐搜狗
 * QQ、微信
@@ -60,9 +60,9 @@ tags: [Mac]
 ### 4、鼓捣前端环境
 * Mac安装xcode之后，会自带Mac，安装xcode吧，以后早晚用得到
 * git安装完成之后，配置相关ssh key，省得以后来回输入账户、密码
-* 安装nodejs，安装gulp、hexo等必要的npm全局包（[前端常用npm全局包-本站](http://localhost:4000/2017/03/20/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8npm%E5%85%A8%E5%B1%80%E5%8C%85/)）
+* 安装nodejs，安装gulp、hexo等必要的npm全局包（[前端常用npm全局包-本站](https://loulanyijian.github.io/2017/03/20/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8npm%E5%85%A8%E5%B1%80%E5%8C%85/)）
 * 全局安装时，你会发现没有权限，简单的解决方式是使用`sudo npm install xxx -g`，然后输入密码即可，还有一种方法，就是安装`homebrew`，获取全局权限，还可以通过`homebrew`安装其余的软件，如nodejs、mongodb等。
-* 安装代码编辑工具（或叫前端IDE），推荐sublime（[sublime插件推荐-本站](http://localhost:4000/2017/03/19/前端工具/sublime插件推荐/)）
+* 安装代码编辑工具（或叫前端IDE），推荐sublime（[sublime插件推荐-本站](https://loulanyijian.github.io/2017/03/19/前端工具/sublime插件推荐/)）
 * 安装抓包、代理工具，推荐使用`Charles`,使用类似于Windows环境下的fiddler，fiddler由于是使用.NET编写，无法使用到Mac环境中。
 	* 开始`Charles`，会提示Java环境错误，百度一下，下载安装一个jar包就可以解决
 * 绑定host工具，推荐使用Gas Mask
@@ -85,9 +85,9 @@ tags: [Mac]
 ……差不多就这样了，工具已经差不多了，赶紧去撸代码吧。
 
 ### 6、附加个人电脑桌面
-<!-- <img src="http://localhost:4000/images/fanyi3.png" alt="node控制台" style="width:70%"> -->
-![第一屏](http://localhost:4000/images/mac1.png)
-![第二屏与Dock](http://localhost:4000/images/mac2.png)
+<!-- <img src="https://loulanyijian.github.io/images/fanyi3.png" alt="node控制台" style="width:70%"> -->
+![第一屏](https://loulanyijian.github.io/images/mac1.png)
+![第二屏与Dock](https://loulanyijian.github.io/images/mac2.png)
 
 
 
