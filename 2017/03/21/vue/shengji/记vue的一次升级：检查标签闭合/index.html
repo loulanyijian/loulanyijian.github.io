@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>记vue的一次升级：检查标签闭合 | 楼兰一剑的道场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前段时间开发了vue的组件库——liveUI，供团队内部使用，自己写了N个组件，剩余的打算让项目组老郑、阿旭来完善，大家一起写代码。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;阿旭最近有时间了，git上拉了代码， 一跑，报错了，提示标签未闭合。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;怪了，一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记vue的一次升级：检查标签闭合">
+<meta property="og:url" content="https://loulanyijian.github.io/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/index.html">
+<meta property="og:site_name" content="楼兰一剑的道场">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前段时间开发了vue的组件库——liveUI，供团队内部使用，自己写了N个组件，剩余的打算让项目组老郑、阿旭来完善，大家一起写代码。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;阿旭最近有时间了，git上拉了代码， 一跑，报错了，提示标签未闭合。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;怪了，一">
+<meta property="og:updated_time" content="2017-03-22T06:39:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记vue的一次升级：检查标签闭合">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前段时间开发了vue的组件库——liveUI，供团队内部使用，自己写了N个组件，剩余的打算让项目组老郑、阿旭来完善，大家一起写代码。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;阿旭最近有时间了，git上拉了代码， 一跑，报错了，提示标签未闭合。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;怪了，一">
+  
+    <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">楼兰一剑的道场</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">施主，请留步……</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://loulanyijian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue/shengji/记vue的一次升级：检查标签闭合" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/" class="article-date">
+  <time datetime="2017-03-21T09:02:34.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/vue实践/">vue实践</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      记vue的一次升级：检查标签闭合
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前段时间开发了vue的组件库——<code>liveUI</code>，供团队内部使用，自己写了N个组件，剩余的打算让项目组老郑、阿旭来完善，大家一起写代码。<br>&nbsp;&nbsp;&nbsp;&nbsp;阿旭最近有时间了，git上拉了代码， 一跑，报错了，提示标签未闭合。<br>&nbsp;&nbsp;&nbsp;&nbsp;怪了，一个月前我开发的时候，好好的，估计是因为vue升级的原因。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;问了一下老郑，他前两天也拉过这个组件库的代码，完善过组件。果然，<a id="more"></a>他前两天拉代码的时候，也报错了，fix了N个未闭合的<code>html tag</code>，就好了。<br>&nbsp;&nbsp;&nbsp;&nbsp;想起来了，前两天，是看尤大说vue升级了一个中级版本，vue由<code>v2.1.x</code>升级到了<code>v2.2.0</code>，当时扫了几眼，感觉跟自己没关系，现在又仔细看了一下，果然，严格检查了未闭合的标签，遇到错误就直接抛错误了。<br>&nbsp;&nbsp;&nbsp;&nbsp;好吧，都怪自己不严格追随尤大，好好研究了一下其余的更新log，其余的影响不是很大，未到改变之前项目代码的程度，默默的在心里注意一下就行了。<br>&nbsp;&nbsp;&nbsp;&nbsp;vue与react越来越像了，前段时间，开发react的时候，一大段html段落，制作成vue的<code>template</code>时，正常运行，通过react的jsx语法时，就会报标签未闭合，当时还好好嘲笑了一把react，认为它不健壮，现在看来，都一样了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/" data-id="cj0jeibf2000035c2uq4dc6a2" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/22/技术大杂烩/duoshuo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新文章</strong>
+      <div class="article-nav-title">
+        
+          纪念多说
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/20/前端工具/前端常用npm全局包/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更早文章</strong>
+      <div class="article-nav-title">前端常用npm全局包</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/" data-title="记vue的一次升级：检查标签闭合" data-url="https://loulanyijian.github.io/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue实践/">vue实践</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/交互心得/">交互心得</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端工具/">前端工具</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端规范/">前端规范</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术大杂烩/">技术大杂烩</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目心路/">项目心路</a><span class="category-list-count">12</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/chrome/" style="font-size: 14px;">chrome</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 12px;">https</a> <a href="/tags/nginx/" style="font-size: 12px;">nginx</a> <a href="/tags/npm/" style="font-size: 12px;">npm</a> <a href="/tags/nuxt/" style="font-size: 10px;">nuxt</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/vue-loader/" style="font-size: 10px;">vue-loader</a> <a href="/tags/vue-router/" style="font-size: 12px;">vue-router</a> <a href="/tags/webpack/" style="font-size: 16px;">webpack</a> <a href="/tags/交互/" style="font-size: 12px;">交互</a> <a href="/tags/国际化/" style="font-size: 18px;">国际化</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/搜索框/" style="font-size: 10px;">搜索框</a> <a href="/tags/规范/" style="font-size: 12px;">规范</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/23/前端工具/前端工具集合/">前端工具集合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/前端工具/前端常用chrome扩展程序/">前端常用chrome扩展程序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/技术大杂烩/duoshuo/">纪念多说</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/">记vue的一次升级：检查标签闭合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/前端工具/前端常用npm全局包/">前端常用npm全局包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhaosd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
