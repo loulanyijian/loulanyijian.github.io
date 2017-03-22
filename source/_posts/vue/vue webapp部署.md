@@ -55,6 +55,7 @@ location ^~ /portal {
 	* 如果是上线生产环境，cdn地址每次都会改变，这样的话，需要每次手动修改`index.html`文件
 
 ### 5、正式部署
-&nbsp;&nbsp;&nbsp;&nbsp;确定好`index.html`文件处理好，提交到git，火星一号上操作即可，操作完毕，清理缓存查看结果，如果发送错误的话，要么是前端没有写对配置参数，要么就是后端的nginx拦截没做好。
+&nbsp;&nbsp;&nbsp;&nbsp;确定好`index.html`文件处理好，提交到git，火星一号上操作即可，操作完毕，清理缓存查看结果。
+&nbsp;&nbsp;&nbsp;&nbsp;如果发送错误的话，要么是前端没有写对配置参数，要么就是后端的nginx拦截没做好。
 
 
