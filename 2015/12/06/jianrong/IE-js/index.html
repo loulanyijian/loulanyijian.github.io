@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>IE的JS兼容性问题 | 楼兰一剑的道场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在与产品撕扯之后，确定了我们的系统，只支持IE9+，而且控制台系统，只支持IE11。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但就算这样，IE照样爆出bug来。
+1、ajax强制304&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;例子：请求了一个列表——添加一条数据——再请求这个列表——数目不添加&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IE的JS兼容性问题">
+<meta property="og:url" content="https://loulanyijian.github.io/2015/12/06/jianrong/IE-js/index.html">
+<meta property="og:site_name" content="楼兰一剑的道场">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在与产品撕扯之后，确定了我们的系统，只支持IE9+，而且控制台系统，只支持IE11。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但就算这样，IE照样爆出bug来。
+1、ajax强制304&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;例子：请求了一个列表——添加一条数据——再请求这个列表——数目不添加&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
+<meta property="og:updated_time" content="2017-03-24T08:44:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IE的JS兼容性问题">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在与产品撕扯之后，确定了我们的系统，只支持IE9+，而且控制台系统，只支持IE11。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但就算这样，IE照样爆出bug来。
+1、ajax强制304&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;例子：请求了一个列表——添加一条数据——再请求这个列表——数目不添加&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
+  
+    <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">楼兰一剑的道场</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">施主，请留步……</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://loulanyijian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jianrong/IE-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/06/jianrong/IE-js/" class="article-date">
+  <time datetime="2015-12-06T07:02:34.000Z" itemprop="datePublished">2015-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/兼容性/">兼容性</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      IE的JS兼容性问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;在与产品撕扯之后，确定了我们的系统，只支持IE9+，而且控制台系统，只支持IE11。<br>&nbsp;&nbsp;&nbsp;&nbsp;但就算这样，IE照样爆出bug来。</p>
+<h3 id="1、ajax强制304"><a href="#1、ajax强制304" class="headerlink" title="1、ajax强制304"></a>1、ajax强制304</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;例子：请求了一个列表——添加一条数据——再请求这个列表——数目不添加<br>&nbsp;&nbsp;&nbsp;&nbsp;打开IE的开发工具查看，数据又正常了，使用抓包工具查看，原来IE会把之前请求过的ajax地址，都当做304给处理，直接拿的缓存，没走实际的后台接口。<br>&nbsp;&nbsp;&nbsp;&nbsp;解决方案：ajax请求加时间戳、或加随机数、或<code>jquery ajax</code> 的<code>cache</code>设置为false<br><a id="more"></a></p>
+<h3 id="2、汉字乱码"><a href="#2、汉字乱码" class="headerlink" title="2、汉字乱码"></a>2、汉字乱码</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;例子：搜索接口，输入汉字后检索，检索不出结果<br>&nbsp;&nbsp;&nbsp;&nbsp;抓包查看，汉字乱掉了<br>&nbsp;&nbsp;&nbsp;&nbsp;解决方案：ajax将检索的关键字编码，使用<code>encodeURIComponent</code>都行</p>
+<h3 id="3、表格出不来"><a href="#3、表格出不来" class="headerlink" title="3、表格出不来"></a>3、表格出不来</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table-style-01"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">colgroup</span>&gt;</span><span class="comment">&lt;!--如果不写colgroup的话，会挂掉--&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">col</span> <span class="attr">width</span>=<span class="string">"25%"</span> /&gt;</span></div><div class="line">     ……</div><div class="line"> <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>分类<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">            ……</div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        ……</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;如上代码，如果不写<code>colgroup</code>的话，先进的浏览器，会把col标签，默认使用<code>colgroup</code>包起来，界面还会正常显示。<br>&nbsp;&nbsp;&nbsp;&nbsp;但是IE，会自作主张的用<code>colgroup</code>标签，将下面的直到tbody标签里面的内容都包起来，然后显示不了表格<br>&nbsp;&nbsp;&nbsp;&nbsp;解决方案：写html要符合w3c标准，不能随意简写。</p>
+<h3 id="4、icheck点击两次才好使的bug"><a href="#4、icheck点击两次才好使的bug" class="headerlink" title="4、icheck点击两次才好使的bug"></a>4、<code>icheck</code>点击两次才好使的bug</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>icheck</code>是jquery的一个优化单选、多选框的插件，在IE下，选中需要点击两下<br>&nbsp;&nbsp;&nbsp;&nbsp;直接使用别的css方案，替换掉<code>icheck</code>，完全是让人上火的鸡肋插件</p>
+<h3 id="5、在默认设置下，cookie失效"><a href="#5、在默认设置下，cookie失效" class="headerlink" title="5、在默认设置下，cookie失效"></a>5、在默认设置下，<code>cookie</code>失效</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;某天QA报了一个bug，IE登录不了，其余的浏览器OK，后台看了日志，说没有<code>cookie</code>。<br>&nbsp;&nbsp;&nbsp;&nbsp;检查了前后端代码，都没问题，忽然想起，是不是被IE禁用了<code>cookie</code>了。<br>&nbsp;&nbsp;&nbsp;&nbsp;IE的默认安全设置，是中级，即只信任本网站的<code>cookie</code>，不信任本网站调用第三方域名种的<code>cookie</code>，刚好我们的就是不同的域名。<br>&nbsp;&nbsp;&nbsp;&nbsp;把权限放到最低，就好使了。<br>&nbsp;&nbsp;&nbsp;&nbsp;解决方案：</p>
+<ul>
+<li>1、<code>cookie</code>本域名种植</li>
+<li>2、IE下，给出单独提示，提示把权限打开</li>
+</ul>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;其余的像<code>event</code>事件、dom操作、宽高获取兼容性问题，已经被大家知悉，jquery已经帮大家处理掉这些兼容性问题，但是还会经常有一些注意不到的细节。<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>IE该死</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>IE6-8更该死</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/12/06/jianrong/IE-js/" data-id="cj0m9685d006famc2x43mjg3r" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IE/">IE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/兼容性/">兼容性</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/16/技术大杂烩/H5界面微信分享抓取规则/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新文章</strong>
+      <div class="article-nav-title">
+        
+          H5界面微信分享抓取规则
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/23/技术大杂烩/前端ajax拦截器/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更早文章</strong>
+      <div class="article-nav-title">------前端ajax拦截器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="2015/12/06/jianrong/IE-js/" data-title="IE的JS兼容性问题" data-url="https://loulanyijian.github.io/2015/12/06/jianrong/IE-js/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+  </section>
+  </section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SEO/">SEO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue实践/">vue实践</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人感悟/">个人感悟</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/交互心得/">交互心得</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/兼容性/">兼容性</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端工具/">前端工具</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端规范/">前端规范</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术大杂烩/">技术大杂烩</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目心路/">项目心路</a><span class="category-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Firefox/" style="font-size: 10px;">Firefox</a> <a href="/tags/IE/" style="font-size: 11.67px;">IE</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/SEO/" style="font-size: 10px;">SEO</a> <a href="/tags/ajax/" style="font-size: 11.67px;">ajax</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/https/" style="font-size: 11.67px;">https</a> <a href="/tags/jquery/" style="font-size: 11.67px;">jquery</a> <a href="/tags/nginx/" style="font-size: 11.67px;">nginx</a> <a href="/tags/npm/" style="font-size: 11.67px;">npm</a> <a href="/tags/nuxt/" style="font-size: 10px;">nuxt</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/safari/" style="font-size: 10px;">safari</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/vue-loader/" style="font-size: 10px;">vue-loader</a> <a href="/tags/vue-router/" style="font-size: 11.67px;">vue-router</a> <a href="/tags/webpack/" style="font-size: 16.67px;">webpack</a> <a href="/tags/交互/" style="font-size: 11.67px;">交互</a> <a href="/tags/兼容性/" style="font-size: 16.67px;">兼容性</a> <a href="/tags/国际化/" style="font-size: 18.33px;">国际化</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/性能/" style="font-size: 10px;">性能</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/搜索框/" style="font-size: 10px;">搜索框</a> <a href="/tags/规范/" style="font-size: 13.33px;">规范</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/23/前端工具/前端工具集合/">前端工具集合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/前端工具/前端常用chrome扩展程序/">前端常用chrome扩展程序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/技术大杂烩/duoshuo/">纪念多说</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/21/vue/shengji/记vue的一次升级：检查标签闭合/">记vue的一次升级：检查标签闭合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/前端工具/前端常用npm全局包/">前端常用npm全局包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhaosd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
