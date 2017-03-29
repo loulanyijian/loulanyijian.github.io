@@ -2,7 +2,7 @@
 title: vue webapp部署规范
 date: 2017-03-14 15:02:34
 categories: [vue实践]
-tags: [vue,nginx]
+tags: [vue,nginx,规范]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;最近小组多个vue的web app项目进入部署阶段，跟不同的后端沟通如何部署我们前端工程的事情，又是说了N遍，决定还是记录一下，以后拿文档怼他们。
