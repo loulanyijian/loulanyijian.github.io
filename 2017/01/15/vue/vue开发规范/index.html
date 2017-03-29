@@ -29,7 +29,7 @@ js版本，选择es6、7进行开发，只要babel支持转义就OK
 
 2.1 vm对象实例化的vm对象，统统以*Vue来命名，如主界面的vue对象，使用mainVue
 2.2 传参的回">
-<meta property="og:updated_time" content="2017-03-29T10:30:02.000Z">
+<meta property="og:updated_time" content="2017-03-29T10:34:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue开发规范">
 <meta name="twitter:description" content="0. 遵循的大JS规范遵循Airbnb的eslint规范
@@ -120,29 +120,29 @@ js版本，选择es6、7进行开发，只要babel支持转义就OK
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="0-遵循的大JS规范"><a href="#0-遵循的大JS规范" class="headerlink" title="0. 遵循的大JS规范"></a>0. 遵循的大JS规范</h3><p>遵循Airbnb的eslint规范</p>
+        <h3 id="0-遵循的大JS规范"><a href="#0-遵循的大JS规范" class="headerlink" title="0. 遵循的大JS规范"></a>0. 遵循的大JS规范</h3><p>遵循<code>Airbnb</code>的<code>eslint</code>规范</p>
 <h3 id="1-版本选择"><a href="#1-版本选择" class="headerlink" title="1. 版本选择"></a>1. 版本选择</h3><ul>
-<li>选择vue2.0最新版本进行开发</li>
-<li>js版本，选择es6、7进行开发，只要babel支持转义就OK</li>
+<li>选择<code>vue2.0</code>最新版本进行开发</li>
+<li>js版本，选择<code>es6、7</code>进行开发，只要<code>babel</code>支持转义就OK</li>
 </ul>
 <h3 id="2-语法规范"><a href="#2-语法规范" class="headerlink" title="2. 语法规范"></a>2. 语法规范</h3><ul>
-<li>无特殊说明的话，vue的命名、缩进，与JS的命名规范一致，遵循Airbnb的eslint规范</li>
+<li>无特殊说明的话，vue的命名、缩进，与JS的命名规范一致，遵循<code>Airbnb</code>的<code>eslint</code>规范</li>
 </ul>
-<h4 id="2-1-vm对象"><a href="#2-1-vm对象" class="headerlink" title="2.1 vm对象"></a>2.1 vm对象</h4><p>实例化的vm对象，统统以*Vue来命名，如主界面的vue对象，使用mainVue</p>
+<h4 id="2-1-vm对象"><a href="#2-1-vm对象" class="headerlink" title="2.1 vm对象"></a>2.1 vm对象</h4><p>实例化的vm对象，统统以<code>*Vue</code>来命名，如主界面的vue对象，使用<code>mainVue</code></p>
 <h4 id="2-2-传参的回车方式"><a href="#2-2-传参的回车方式" class="headerlink" title="2.2 传参的回车方式"></a>2.2 传参的回车方式</h4><p>一个参数一个回车，前面对齐<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line">&lt;li v-<span class="keyword">for</span>=<span class="string">"item in templateList"</span></div><div class="line">  @click=<span class="string">"chooseModal(item.id,item.activityTypeId)"</span> @mouseenter=<span class="string">"mouseoverFun(item.id)"</span> @mouseleave=<span class="string">"mouseoutFun"</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">// good </span></div><div class="line">&lt;li </div><div class="line">    v-<span class="keyword">for</span>=<span class="string">"item in templateList"</span></div><div class="line">    @click=<span class="string">"chooseModal(item.id,item.activityTypeId)"</span> </div><div class="line">    @mouseenter=<span class="string">"mouseoverFun(item.id)"</span> </div><div class="line">    @mouseleave=<span class="string">"mouseoutFun"</span>&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="3-公用部分"><a href="#3-公用部分" class="headerlink" title="3. 公用部分"></a>3. 公用部分</h3><h4 id="3-1-过滤器编写"><a href="#3-1-过滤器编写" class="headerlink" title="3.1 过滤器编写"></a>3.1 过滤器编写</h4><p>通用的过滤器方法，如日期、图片等，写到公用的commonFilter.js方法里面，全局引用<br>单个使用的过滤器方法，放到单独的业务代码之中</p>
+<h3 id="3-公用部分"><a href="#3-公用部分" class="headerlink" title="3. 公用部分"></a>3. 公用部分</h3><h4 id="3-1-过滤器编写"><a href="#3-1-过滤器编写" class="headerlink" title="3.1 过滤器编写"></a>3.1 过滤器编写</h4><p>通用的过滤器方法，如日期、图片等，写到公用的<code>commonFilter.js</code>方法里面，全局引用<br>单个使用的过滤器方法，放到单独的业务代码之中</p>
 <h4 id="3-2-指令编写"><a href="#3-2-指令编写" class="headerlink" title="3.2 指令编写"></a>3.2 指令编写</h4><p>类似于过滤器，必要的话，提出公共的来</p>
-<h4 id="3-3-static文件夹"><a href="#3-3-static文件夹" class="headerlink" title="3.3 static文件夹"></a>3.3 static文件夹</h4><p>该文件夹只放不能被webpack处理的css与JS文件，如baseCore.css、modify.css<br>其余的类似config.js，需要放到src下面，被webpack处理</p>
-<h4 id="3-4-svg-split"><a href="#3-4-svg-split" class="headerlink" title="3.4 svg split"></a>3.4 svg split</h4><p>公用的一大堆svg元素，不能直接写到index.html中，需要处理到单独组件中，保证index.html干净</p>
-<h3 id="4-插件选择"><a href="#4-插件选择" class="headerlink" title="4.插件选择"></a>4.插件选择</h3><p>vue自带的靠谱插件，vue router、vuex、vue resource，其余的，呵呵</p>
-<h4 id="4-1-日期插件"><a href="#4-1-日期插件" class="headerlink" title="4.1 日期插件"></a>4.1 日期插件</h4><p>选择my97date，这个可以做双向数据绑定<br>千万不能使用laydate，有bug，扩展性也不行</p>
-<h4 id="4-2-ajax插件"><a href="#4-2-ajax插件" class="headerlink" title="4.2 ajax插件"></a>4.2 ajax插件</h4><p>vue官方推荐axois，但是这个不支持jsonp，可以使用vue resource</p>
-<h4 id="4-3-radio美化插件"><a href="#4-3-radio美化插件" class="headerlink" title="4.3 radio美化插件"></a>4.3 radio美化插件</h4><p>自写样式，替代icheck插件，实现双向数据绑定</p>
+<h4 id="3-3-static文件夹"><a href="#3-3-static文件夹" class="headerlink" title="3.3 static文件夹"></a>3.3 static文件夹</h4><p>该文件夹只放不能被webpack处理的css与JS文件，如<code>baseCore.css</code>、<code>modify.css</code><br>其余的类似<code>config.js</code>，需要放到src下面，被webpack处理</p>
+<h4 id="3-4-svg-split"><a href="#3-4-svg-split" class="headerlink" title="3.4 svg split"></a>3.4 <code>svg split</code></h4><p>公用的一大堆svg元素，不能直接写到<code>index.html</code>中，需要处理到单独组件中，保证<code>index.html</code>干净</p>
+<h3 id="4-插件选择"><a href="#4-插件选择" class="headerlink" title="4.插件选择"></a>4.插件选择</h3><p>vue自带的靠谱插件，<code>vue router</code>、<code>vuex</code>、<code>vue resource</code>，其余的，呵呵</p>
+<h4 id="4-1-日期插件"><a href="#4-1-日期插件" class="headerlink" title="4.1 日期插件"></a>4.1 日期插件</h4><p>选择<code>my97date</code>，这个可以做双向数据绑定<br>千万不能使用<code>laydate</code>，有bug，扩展性也不行</p>
+<h4 id="4-2-ajax插件"><a href="#4-2-ajax插件" class="headerlink" title="4.2 ajax插件"></a>4.2 ajax插件</h4><p>vue官方推荐axois，但是这个不支持jsonp，可以使用<code>vue resource</code>来支持jsonp</p>
+<h4 id="4-3-radio美化插件"><a href="#4-3-radio美化插件" class="headerlink" title="4.3 radio美化插件"></a>4.3 radio美化插件</h4><p>自写样式，替代<code>icheck</code>插件，实现双向数据绑定</p>
 <h3 id="5-单文件组件"><a href="#5-单文件组件" class="headerlink" title="5. 单文件组件"></a>5. 单文件组件</h3><ul>
-<li>三大模块顺序 template——script——style，顺序放置</li>
+<li>三大模块顺序 <code>template</code>——<code>script</code>——<code>style</code>，顺序放置</li>
 <li>模块直接，保留一个空行</li>
 <li>自定义的模块，要放到最后</li>
-<li>style，要添加scoped，如果是多处用到的样式，写到modify.css里面</li>
+<li>style，要添加<code>scoped</code>，如果是多处用到的样式，写到<code>modify.css</code>里面</li>
 <li>script里面代码顺序<ul>
 <li>import</li>
 <li>export<ul>
@@ -163,11 +163,11 @@ js版本，选择es6、7进行开发，只要babel支持转义就OK
 </ul>
 </li>
 </ul>
-
+<h3 id="6-其余的待观察总结"><a href="#6-其余的待观察总结" class="headerlink" title="6. 其余的待观察总结"></a>6. 其余的待观察总结</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loulanyijian.github.io/2017/01/15/vue/vue开发规范/" data-id="cj0qmbco50024eqs6tgxv2egj" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+      <a data-url="https://loulanyijian.github.io/2017/01/15/vue/vue开发规范/" data-id="cj0uu4pcl0027uwc27e28vq4i" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       
