@@ -32,3 +32,23 @@ tags: [规范,eslint]
 * 7、还有一些更严格的语法，待观察
 
 &nbsp;&nbsp;&nbsp;&nbsp;**刚好我们现在要开始一个新的vue webapp开发，刚好，从这个系统开始，强推一下JS规范，顺便把ES6的语法强化一下，虽然开始的时候肯定会阵痛，但我相信是值得的**
+
+修改了之前的一个中小型项目，由于业务的需求，先达到一个妥协的版本
+``` javascript
+'rules': {
+  'no-unused-vars': 0, // 定义了变量，未使用。可能有全局变量，别人使用的
+  'global-require': 0, // 不能使用require
+  'comma-dangle': 0, // 结尾逗号
+  'no-console': 0, // 不能有console，警告
+  'no-param-reassign': 0, // 不允许函数参数重新赋值
+  'no-unused-expressions': 0, // 不允许  this.toast.finally && this.toast.finally();形式
+  'func-names': 0, // 不允许使用 const getList = function() {...}，是个警告
+  'no-prototype-builtins': 0, // 不能使用prototype操作
+  'no-restricted-syntax': 0, // 禁止使用for in
+  'prefer-const': 0, // 如果没改变的话，必须是const
+  'no-undef': 0, // 使用了未定义的变量
+  'arrow-parens': 0, // 箭头函数用小括号括起来
+  'object-shorthand': 0, //强制对象字面量缩写语法、
+  'guard-for-in': 0, // for in循环要用if语句过滤
+  'import/no-dynamic-require': 0 // 不能使用动态require
+```
