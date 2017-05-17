@@ -10,7 +10,7 @@ tags: [vue,性能]
 &nbsp;&nbsp;&nbsp;&nbsp;这个好，符合我的性能观点，按需加载。
 &nbsp;&nbsp;&nbsp;&nbsp;运行`npm run build`进行打包，会打出`N+3`个JS文件，如下图：
 <!--more-->
-<img src="http://localhost:4000/images/vue-file.png" alt="打包结果" style="width:30%">
+<img src="https://loulanyijian.github.io/images/vue-file.png" alt="打包结果" style="width:30%">
 &nbsp;&nbsp;&nbsp;&nbsp;上图的`0-2`，是指我这个项目，共有3个路由界面，对应的3个业务js
 * app.js，是我们项目的公用JS代码，入口就是`main.js`，这个公用代码，就是指除了在`node_moudles`公用包之外的公用代码。
 

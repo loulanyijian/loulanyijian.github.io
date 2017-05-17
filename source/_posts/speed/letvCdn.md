@@ -15,6 +15,7 @@ tags: [性能,CDN]
 	* `http://i2.letvimg.com/`
 	* `http://i3.letvimg.com/`
 * 4、支持https、http无缝切换
+* 5、负载力强，支持全球加速，再也不用担心JS挂掉了
 
 #### 1、为毛都是单独的一级域名？
 为了不与主站的域名重复，免得携带cookie过去
@@ -36,4 +37,4 @@ tags: [性能,CDN]
 <link rel="dns-prefetch" href="http://i1.letvimg.com" />
 ……
 ```
-
+会提前对DNS进行解析，提高界面的渲染速度

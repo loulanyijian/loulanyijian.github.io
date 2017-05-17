@@ -21,7 +21,7 @@ tags: [SEO]
 
 * 播放页中的相关剧集链接对搜索引擎不可见，搜索引擎无法抓取相关剧集中的内容。从整站的角度来看，所有的相关剧集都不可见，严重影响搜索引擎对页面中内容的正常抓取。（爱奇艺、优酷等视网站相关剧集源代码可见的，因此，可参考对应修改）
 
-![seo](http://localhost:4000//images/seo.png)
+![seo](https://loulanyijian.github.io//images/seo.png)
 
 ### 4、CMS中sitemap生成功能开发实施
 
