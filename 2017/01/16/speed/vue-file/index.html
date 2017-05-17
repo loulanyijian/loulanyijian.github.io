@@ -11,12 +11,12 @@
 <meta property="og:url" content="https://loulanyijian.github.io/2017/01/16/speed/vue-file/index.html">
 <meta property="og:site_name" content="楼兰一剑的道场">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;使用vue-cli开发vue web app，首先考虑的是线上环境的打包部署，一开始以为无论多少个界面，只会打出一个超级大的JS，首次请求的时候巨慢无比。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;后来发现我错了，vue可以借助webpack，N个界面，可以打出对应的N个JS，按需加载。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个好，符合">
-<meta property="og:image" content="http://localhost:4000/images/vue-file.png">
-<meta property="og:updated_time" content="2017-03-23T07:40:57.000Z">
+<meta property="og:image" content="https://loulanyijian.github.io/images/vue-file.png">
+<meta property="og:updated_time" content="2017-05-17T03:44:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从vue打包文件看项目JS引用">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;使用vue-cli开发vue web app，首先考虑的是线上环境的打包部署，一开始以为无论多少个界面，只会打出一个超级大的JS，首次请求的时候巨慢无比。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;后来发现我错了，vue可以借助webpack，N个界面，可以打出对应的N个JS，按需加载。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这个好，符合">
-<meta name="twitter:image" content="http://localhost:4000/images/vue-file.png">
+<meta name="twitter:image" content="https://loulanyijian.github.io/images/vue-file.png">
   
     <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
   
@@ -95,7 +95,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;使用<code>vue-cli</code>开发<code>vue web app</code>，首先考虑的是线上环境的打包部署，一开始以为无论多少个界面，只会打出一个超级大的JS，首次请求的时候巨慢无比。<br>&nbsp;&nbsp;&nbsp;&nbsp;后来发现我错了，vue可以借助<code>webpack</code>，N个界面，可以打出对应的N个JS，按需加载。<br>&nbsp;&nbsp;&nbsp;&nbsp;这个好，符合我的性能观点，按需加载。<br>&nbsp;&nbsp;&nbsp;&nbsp;运行<code>npm run build</code>进行打包，会打出<code>N+3</code>个JS文件，如下图：<br><a id="more"></a><br><img src="http://localhost:4000/images/vue-file.png" alt="打包结果" style="width:30%"><br>&nbsp;&nbsp;&nbsp;&nbsp;上图的<code>0-2</code>，是指我这个项目，共有3个路由界面，对应的3个业务js</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;使用<code>vue-cli</code>开发<code>vue web app</code>，首先考虑的是线上环境的打包部署，一开始以为无论多少个界面，只会打出一个超级大的JS，首次请求的时候巨慢无比。<br>&nbsp;&nbsp;&nbsp;&nbsp;后来发现我错了，vue可以借助<code>webpack</code>，N个界面，可以打出对应的N个JS，按需加载。<br>&nbsp;&nbsp;&nbsp;&nbsp;这个好，符合我的性能观点，按需加载。<br>&nbsp;&nbsp;&nbsp;&nbsp;运行<code>npm run build</code>进行打包，会打出<code>N+3</code>个JS文件，如下图：<br><a id="more"></a><br><img src="https://loulanyijian.github.io/images/vue-file.png" alt="打包结果" style="width:30%"><br>&nbsp;&nbsp;&nbsp;&nbsp;上图的<code>0-2</code>，是指我这个项目，共有3个路由界面，对应的3个业务js</p>
 <ul>
 <li>app.js，是我们项目的公用JS代码，入口就是<code>main.js</code>，这个公用代码，就是指除了在<code>node_moudles</code>公用包之外的公用代码。</li>
 </ul>
@@ -119,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loulanyijian.github.io/2017/01/16/speed/vue-file/" data-id="cj2sfzrhb0020jtc2b92a729j" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+      <a data-url="https://loulanyijian.github.io/2017/01/16/speed/vue-file/" data-id="cj2sg1ggn001xlhc2uu4xnxmn" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       
@@ -224,11 +224,11 @@ var duoshuoQuery = {short_name:"datoublog"};
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
+            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
+            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
           </li>
         
           <li>

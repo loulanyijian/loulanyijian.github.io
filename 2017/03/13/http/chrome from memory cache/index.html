@@ -11,12 +11,12 @@
 <meta property="og:url" content="https://loulanyijian.github.io/2017/03/13/http/chrome from memory cache/index.html">
 <meta property="og:site_name" content="楼兰一剑的道场">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近项目组阿海，满脸诧异的请教我一个奇怪的问题，情景如下：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;他使用fiddler代理服务器上JS文件，第一次的时候，可以查看到JS请求，再刷新界面，就看不到JS请求了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在检查确认了他fiddler代理是正确配置之后，在chrome里面实际操作一下，才想起，新">
-<meta property="og:image" content="http://localhost:4000/images/http1.png">
-<meta property="og:updated_time" content="2017-03-21T08:28:21.000Z">
+<meta property="og:image" content="https://loulanyijian.github.io/images/http1.png">
+<meta property="og:updated_time" content="2017-05-17T03:44:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="chrome from memory cache 与fiddler">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近项目组阿海，满脸诧异的请教我一个奇怪的问题，情景如下：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;他使用fiddler代理服务器上JS文件，第一次的时候，可以查看到JS请求，再刷新界面，就看不到JS请求了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在检查确认了他fiddler代理是正确配置之后，在chrome里面实际操作一下，才想起，新">
-<meta name="twitter:image" content="http://localhost:4000/images/http1.png">
+<meta name="twitter:image" content="https://loulanyijian.github.io/images/http1.png">
   
     <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
   
@@ -95,14 +95,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;最近项目组阿海，满脸诧异的请教我一个奇怪的问题，情景如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;他使用<code>fiddler</code>代理服务器上JS文件，第一次的时候，可以查看到JS请求，再刷新界面，就看不到JS请求了。<br>&nbsp;&nbsp;&nbsp;&nbsp;在检查确认了他fiddler代理是正确配置之后，在chrome里面实际操作一下，才想起，新版的chrome已经将http &nbsp;&nbsp;&nbsp;&nbsp;code为304的情形，都处理成了200，在network面板中查看，如下展示：<br><img src="http://localhost:4000/images/http1.png" alt="from memory cache"><br>&nbsp;&nbsp;&nbsp;&nbsp;如上所示颜色比较虚的status栏，对应的size为（<code>from memory cache</code>），即从内存中的缓存获取。<br>&nbsp;&nbsp;&nbsp;&nbsp;之前的304状态，还是会发送http请求的，现在直接取了缓存，压根不走http请求了，抓包也看不到了。<br>&nbsp;&nbsp;&nbsp;&nbsp;解决办法很简单：</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;最近项目组阿海，满脸诧异的请教我一个奇怪的问题，情景如下：<br>&nbsp;&nbsp;&nbsp;&nbsp;他使用<code>fiddler</code>代理服务器上JS文件，第一次的时候，可以查看到JS请求，再刷新界面，就看不到JS请求了。<br>&nbsp;&nbsp;&nbsp;&nbsp;在检查确认了他fiddler代理是正确配置之后，在chrome里面实际操作一下，才想起，新版的chrome已经将http &nbsp;&nbsp;&nbsp;&nbsp;code为304的情形，都处理成了200，在network面板中查看，如下展示：<br><img src="https://loulanyijian.github.io/images/http1.png" alt="from memory cache"><br>&nbsp;&nbsp;&nbsp;&nbsp;如上所示颜色比较虚的status栏，对应的size为（<code>from memory cache</code>），即从内存中的缓存获取。<br>&nbsp;&nbsp;&nbsp;&nbsp;之前的304状态，还是会发送http请求的，现在直接取了缓存，压根不走http请求了，抓包也看不到了。<br>&nbsp;&nbsp;&nbsp;&nbsp;解决办法很简单：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<em> 1、手动清理一下浏览器缓存<br>&nbsp;&nbsp;&nbsp;&nbsp;</em> 2、window电脑下，使用<code>Ctrl+F5</code>强刷界面</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;PS：在<code>chrome dev tools</code>中勾选<code>disable cache</code>，是不好使的</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loulanyijian.github.io/2017/03/13/http/chrome from memory cache/" data-id="cj2sfzrgh000xjtc2h94hoa9l" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+      <a data-url="https://loulanyijian.github.io/2017/03/13/http/chrome from memory cache/" data-id="cj2sg1gfs000slhc2yqz9dvq5" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       
@@ -207,11 +207,11 @@ var duoshuoQuery = {short_name:"datoublog"};
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
+            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
+            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
           </li>
         
           <li>

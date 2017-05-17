@@ -23,12 +23,12 @@ Google Web Fundamentals 是一个非常优秀的文档，里面讲到了跟web�
 1、DOM：Document Object Model，浏览器将HT">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/full-process.png?_=5152072">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/render-tree-construction.png?_=5152072">
-<meta property="og:image" content="http://localhost:4000/images/render.png">
+<meta property="og:image" content="https://loulanyijian.github.io/images/render.png">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/1----.png?_=5152072">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/2---painting.jpg?_=5152072">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/3jquery--.png?_=5152072">
 <meta property="og:image" content="http://delai.me/code/content/images/2016/01/4load.png?_=5152072">
-<meta property="og:updated_time" content="2017-05-17T03:29:33.000Z">
+<meta property="og:updated_time" content="2017-05-17T03:44:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器渲染机制——转+补充">
 <meta name="twitter:description" content="本来想自己总结来着，结果网上的有篇文章，写的太好了，直接拿过来学习了
@@ -151,7 +151,7 @@ Google Web Fundamentals 是一个非常优秀的文档，里面讲到了跟web�
 </ul>
 <p>以上五个步骤前3个步骤之所有使用 “Create/Update” 是因为DOM、CSSOM、Render Tree都可能在第一次Painting后又被更新多次，比如JS修改了DOM或者CSS属性。</p>
 <p>Layout 和 Painting 也会被重复执行，除了DOM、CSSOM更新的原因外，图片下载完成后也需要调用Layout 和 Painting来更新网页。</p>
-<p><img src="http://localhost:4000/images/render.png" alt=""></p>
+<p><img src="https://loulanyijian.github.io/images/render.png" alt=""></p>
 <h3 id="看Timeline，一目了然"><a href="#看Timeline，一目了然" class="headerlink" title="看Timeline，一目了然"></a>看Timeline，一目了然</h3><hr>
 <p>我扒了一段有赞PC首页的代码到本地，通过Node跑起来。Node作为Server端，对<code>/js/jquery.js</code> 做了延时2s返回的处理，并且把<code>&lt;script src=&quot;http://127.0.0.1:8080/js/jquery.js&quot;&gt;&lt;/script&gt;</code> 放到导航栏的下面，结果是这样的：<br><img src="http://delai.me/code/content/images/2016/01/1----.png?_=5152072" alt=""><br><img src="http://delai.me/code/content/images/2016/01/2---painting.jpg?_=5152072" alt=""><br><img src="http://delai.me/code/content/images/2016/01/3jquery--.png?_=5152072" alt=""><br><img src="http://delai.me/code/content/images/2016/01/4load.png?_=5152072" alt=""><br>从上面的Timeline我们可以看出：</p>
 <p>首屏时间和DomContentLoad事件没有必然的先后关系</p>
@@ -165,7 +165,7 @@ Google Web Fundamentals 是一个非常优秀的文档，里面讲到了跟web�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://loulanyijian.github.io/2016/08/02/browser/浏览器渲染机制/" data-id="cj2sfzrfr0004jtc2w5cyob7l" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+      <a data-url="https://loulanyijian.github.io/2016/08/02/browser/浏览器渲染机制/" data-id="cj2sg1gfe0009lhc2maan0vkd" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       
       
@@ -270,11 +270,11 @@ var duoshuoQuery = {short_name:"datoublog"};
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
+            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
           </li>
         
           <li>
-            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
+            <a href="/2017/05/17/speed/vue/">vue性能优化</a>
           </li>
         
           <li>
