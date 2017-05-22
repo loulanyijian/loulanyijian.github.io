@@ -1,12 +1,14 @@
 ---
 title: 由乐视CDN看前端性能优化
-date: 2016-01-04 15:02:34
+date: 2015-12-24 15:02:34
 categories: 性能优化
 tags: [性能,CDN]
 ---
 
 最近，我们的系统告别了自己搭建静态服务器的时代，开始对接乐视网的CDN，以做更好的静态加速。
-乐视网CDN的特点：
+总所周知，cdn加速是前端性能优化的一大利器，具体请见[百度百科](http://baike.baidu.com/link?url=L54tbfol-OLZ55DPthmk86H1CaU_iRvh7Tj0KK09NeWU9T3jewmnAIkyZfsgCVxaP3ZSHRCxC6pG7j4vavocBq)
+
+而乐视网CDN也有自己的特点：
 * 1、强缓存时间1年整，`Cache-Control:max-age=31536000`
 * 2、每次上线，地址不一样，格式为`http://js.letvcdn.com/lc02_lecloud/201511/25/09/39/xx.min.js`，即每次上线JS，都会按时间给出地址
 * 3、css、js，各自是一个域名，图片的话，有如下4个域名：
