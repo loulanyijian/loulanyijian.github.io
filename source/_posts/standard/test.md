@@ -1,6 +1,6 @@
 ---
 title: 大前端测试与自测规范
-date: 2017-02-06 15:02:34
+date: 2016-03-06 15:02:34
 categories: 前端规范
 tags: [规范,测试]
 ---
@@ -11,7 +11,7 @@ tags: [规范,测试]
 * 2.测试有质量之分，先进行[`冒烟测试`](http://baike.baidu.com/link?url=sk-oIxGX97wthP44wk8nNENkiVkHGt7_P037GKdilh4D3YoE_NIDbakJJ-U5oHH_2RWukmJvy6XF7JNDGACpvOx5c6XNG9MkGvQHj4_hvBOLeMzzgnrDzPKZdBk_fKv9)，冒烟测试不过的话，直接打回去，记一次不合格
 * 3.按步骤的测试流程………………
 
-&nbsp;&nbsp;&nbsp;&nbsp;让我想起来，我在15年底16年初制定大前端内部规范的时候，也制定了自测规范，发展到现在，具体入下：
+&nbsp;&nbsp;&nbsp;&nbsp;让我想起来，我之前制定大前端内部规范的时候，也制定了自测规范，发展到现在，具体入下：
 <!--more-->
 
 * 0.提交到QA团队之前，一定要做完整自测，自测都通过不了的，不允许提测

@@ -1,13 +1,13 @@
 ---
 title: 跨域:（一）接口跨域
-date: 2016-08-04 15:02:34
+date: 2015-09-04 15:02:34
 categories: 跨域
 tags: [跨域, iframe, jsonp, reponse]
 ---
 鄙人自封公司第一跨域解决大师，的确需要写一下关于跨域的事情。
 
 前端调试，跨域太常见了。如下图：
-![chrome下跨域提示](http://https://loulanyijian.github.io/images/kuayu1.png)
+![chrome下跨域提示](https://loulanyijian.github.io/images/kuayu1.png)
 跨域的原因，是浏览器的安全机制，不允许跨域互相调用，会提高网站的安全性。
 
 前端跨域的最大模块，是ajax接口跨域

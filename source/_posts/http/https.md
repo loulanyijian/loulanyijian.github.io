@@ -12,13 +12,16 @@ tags: [https]
  这些空格，不是我们代码返回的。
 
 * 实际的案例二，界面被篡改
-<img src="http://https://loulanyijian.github.io/images/https2.png" alt="被劫持的html5界面" style="width:30%">
+<img src="https://loulanyijian.github.io/images/https2.png" alt="被劫持的html5界面" style="width:30%">
 如上图，右下角红框里面的内容，不是我们的人员添加的。
 
 如上的两则案例，原因都是网络劫持，还有15年，我们的客户大疆报了个bug，我们直到现场才发现是网络被运营商劫持了。
 
 
 ### http为毛不安全？
+
+<!-- more -->
+
 * HTTP 明文传输不仅会泄露数据，也会很容易被注入数据
 	举个例子：小明暗恋小红，写了情书，托小刚给小红，由于不是加密的，小刚一看，情书，把“我爱你”改成了“我恨你”，然后转给了小红。
 	小红一看很生气，小明也不知道，还在乐呵呵的傻等……
@@ -55,7 +58,7 @@ HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全
 ### 后续
 现在chrome浏览器大力推广https，凡是http的链接，都会在地址栏前面，加上一个感叹号，表示不安全
 Firefox，也在推广https，更猛，在输入框上，直接加上不安全的提示。如下图：
-<img src="http://https://loulanyijian.github.io/images/https3.png" alt="Firefox安全提示" style="width:30%">
+<img src="https://loulanyijian.github.io/images/https3.png" alt="Firefox安全提示" style="width:30%">
 小白用户一看，太吓人了，赶紧不用你的网站了，然后造成用户量流失。
 所以，得做https，而且得好好做做。
 

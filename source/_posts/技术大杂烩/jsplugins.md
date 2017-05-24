@@ -25,6 +25,8 @@ tags: [js插件]
 
 ### 表格类
 
+<!-- more -->
+
 * [jquery datatable](http://datatables.club/)
 	基于jquery
 	包含表格的展示、分页、ajax源、全选、动态创建行列等几乎所有表格相关的内容

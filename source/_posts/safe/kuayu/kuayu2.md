@@ -1,6 +1,6 @@
 ---
 title: 跨域:（二）cookie、canvas等跨域
-date: 2016-08-05 15:02:34
+date: 2015-09-05 15:02:34
 categories: 跨域
 tags: [跨域, canvas, iframe]
 ---

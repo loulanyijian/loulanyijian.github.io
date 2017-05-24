@@ -10,6 +10,8 @@ tags: [https]
 * 1、很明显的，安全
 * 2、利于谷歌进行SEO
 
+<!-- more -->
+
 ### https的缺点——摘自马海祥博客
 * 1、SEO方面
 据ACM CoNEXT数据显示，使用HTTPS协议会使页面的加载时间延长近50%，增加10%到20%的耗电，此外，HTTPS协议还会影响缓存，增加数据开销和功耗，甚至已有安全措施也会受到影响也会因此而受到影响。
@@ -27,7 +29,7 @@ tags: [https]
 ### 总结
 https几乎除了安全性能高之外，没有别的优点，需要做整体的全网优化，要是贸然上了，估计会影响业务。
 也需要做好证书配置错误、过期的准备，要不然就会像12306一样，出现如下尴尬的局面：
-<img src="http://https://loulanyijian.github.io/images/https4.png" alt="12306" style="width:50%">
+<img src="https://loulanyijian.github.io/images/https4.png" alt="12306" style="width:50%">
 
 参考链接:
 [HTTP与HTTPS的区别](http://www.mahaixiang.cn/internet/1233.html)
