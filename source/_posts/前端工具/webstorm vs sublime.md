@@ -2,7 +2,7 @@
 title: webstorm vs sublime
 date: 2015-06-03 15:02:34
 categories: 前端工具
-tags: [webstorm, sublime]
+tags: [前端工具,webstorm, sublime]
 ---
 
 公司8g内存的惠普笔记本，带webstorm（后面简称为WS）已经带不动了，因为我经常打开N个功能用于跑代码。

@@ -2,7 +2,7 @@
 title: chrome 扩展工具之坑
 date: 2017-03-29 13:06:34
 categories: 前端工具
-tags: [chrome]
+tags: [前端工具,chrome]
 ---
 
 今天，临近项目组的阿栋在使用`chrome vue tools`调试程序的时候，发现点击一下控制台就报错。

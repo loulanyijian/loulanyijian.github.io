@@ -2,7 +2,7 @@
 title: 跨域:（一）接口跨域
 date: 2015-09-04 15:02:34
 categories: 跨域
-tags: [跨域, iframe, jsonp, reponse]
+tags: [跨域, iframe, jsonp, response]
 ---
 鄙人自封公司第一跨域解决大师，的确需要写一下关于跨域的事情。
 

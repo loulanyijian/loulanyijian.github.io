@@ -2,7 +2,7 @@
 title: sublime插件推荐
 date: 2015-07-01 15:02:34
 categories: 前端工具
-tags: [sublime]
+tags: [前端工具,sublime]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;从C、C++的学生时代，到刚工作的Java时代，又到现在的JS时代，使用了`VC6`、vs系列、`eclipse`、`webstorm`、`atom`等N多代码编辑器，最终因为速度与可玩性，选择了`sublime`。下面是根据自己的习惯，推荐常用的`sublime`插件。

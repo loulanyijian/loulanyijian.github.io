@@ -2,7 +2,7 @@
 title: 前端常用chrome扩展程序
 date: 2017-03-22 13:06:34
 categories: 前端工具
-tags: [chrome]
+tags: [前端工具,chrome]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;chrome作为前端开发调试必备工具，拥有强大的功能，在我看来，全世界就chrome一个浏览器的话，前端开发该有多好。

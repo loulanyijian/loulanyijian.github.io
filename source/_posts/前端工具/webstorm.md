@@ -2,7 +2,7 @@
 title: 关于webstorm
 date: 2015-05-24 15:02:34
 categories: 前端工具
-tags: [webstorm]
+tags: [前端工具,webstorm]
 ---
 
 最近被大家推荐使用webstorm（后面简称为WS）来做前端开发，用了N久，总结如下：

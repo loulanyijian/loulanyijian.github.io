@@ -2,7 +2,7 @@
 title: 前端常用npm全局包
 date: 2017-03-20 13:06:34
 categories: 前端工具
-tags: [npm]
+tags: [前端工具,npm]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;就现在做前端工作而言，不会node、不会鼓捣npm的话，已经严重落伍了，落伍到不行了。
