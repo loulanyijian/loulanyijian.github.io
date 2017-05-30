@@ -7,7 +7,7 @@ tags: [交互]
 
 管理后台表格，估计是最常见的一种界面，里面富含很多交互逻辑
 
-![管理后台表格](http://localhost:4000/images/table.png)
+![管理后台表格](https://loulanyijian.github.io/images/table.png)
 
 
 如上图，表格具体可分为如下几个模块

@@ -15,6 +15,6 @@ tags: [交互,抽奖]
 
 刚好产品经理请假，我就包揽了抽奖H5界面的产品逻辑、交互，以及前端代码编写工作，主要就是如下的流程图。
 
-<img src="http://localhost:4000/images/choujiang.svg" alt="抽奖活动H5界面交互逻辑" style="width:50%">
+<img src="https://loulanyijian.github.io/images/choujiang.svg" alt="抽奖活动H5界面交互逻辑" style="width:50%">
 
 **抽奖与钱相关，要前后端做好，以免在技术角度上被攻陷**

@@ -13,6 +13,8 @@ tags: [跨域, chrome]
 点击应用和确定后关闭属性页面，并打开chrome浏览器。如果浏览器出现提示“你使用的是不受支持的命令标记 `--disable-web-security`”，那么说明配置成功。
 如上是旧版的chrome浏览器，如果是新版的话，就麻烦了点。
 
+<!-- more -->
+
 具体做法为：
 
 * 1.在电脑上新建一个目录，例如：`C:\MyChromeDevUserData`
