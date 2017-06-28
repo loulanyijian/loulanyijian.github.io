@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>楼兰一剑的道场</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范大师、前端性能优化大师、跨域解决大师、SEO第一人……等绝对的猛人">
+<meta property="og:type" content="website">
+<meta property="og:title" content="楼兰一剑的道场">
+<meta property="og:url" content="https://loulanyijian.github.io/page/7/index.html">
+<meta property="og:site_name" content="楼兰一剑的道场">
+<meta property="og:description" content="楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范大师、前端性能优化大师、跨域解决大师、SEO第一人……等绝对的猛人">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="楼兰一剑的道场">
+<meta name="twitter:description" content="楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范大师、前端性能优化大师、跨域解决大师、SEO第一人……等绝对的猛人">
+  
+    <link rel="alternate" href="/atom.xml" title="楼兰一剑的道场" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">楼兰一剑的道场</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">施主，请留步……本人楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范制定大师、前端性能优化大师、跨域解决大师、html5技术先驱、前端安全专家、vuejs第一人、SEO第一人……</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="https://github.com/loulanyijian">楼兰一剑的github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://loulanyijian.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-safe/kuayu/kuayu2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/05/safe/kuayu/kuayu2/" class="article-date">
+  <time datetime="2015-09-05T07:02:34.000Z" itemprop="datePublished">2015-09-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/跨域/">跨域</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/05/safe/kuayu/kuayu2/">跨域:（二）cookie、canvas等跨域</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端跨域，除了接口的跨域之外，还有其余N多形式的跨域</p>
+<h3 id="1、iframe调用"><a href="#1、iframe调用" class="headerlink" title="1、iframe调用"></a>1、iframe调用</h3><p>如果iframe如果是跨域的话，就无法进行父、子界面的数据交互，无法进行dom操作、无法进行方法调用。<br>如果是跨域的话，子界面无法请求到父界面的location地址，但是可以改写，这个可以有效防止自己的界面被恶意网站做iframe嵌套。<br>iframe还有一个绝招，就是设置相应header，直接不允许跨域加载</p>
+<h3 id="2、cookie的跨域"><a href="#2、cookie的跨域" class="headerlink" title="2、cookie的跨域"></a>2、cookie的跨域</h3><p>自从localstorage出来之后，cookie很少记录缓存了，现在一般用于记录用户的登录信息，用于网站界面之间的跳转。<br>cookie也有域之分，也可以设置根域。<br>跨越接口请求，携带cookie的话，在前文中有解决方案。<br>利用cookie的跨域特性，一般大公司的cdn或者静态资源服务器，都会使用不同域名的服务器，免得cookie带过去，又浪费带宽，又加大了服务器解析请求头的时间。</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/05/safe/kuayu/kuayu2/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/09/05/safe/kuayu/kuayu2/" data-id="cj4gpfior00jagvc2akbn96ej" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iframe/">iframe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域/">跨域</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-safe/kuayu/kuayu1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/04/safe/kuayu/kuayu1/" class="article-date">
+  <time datetime="2015-09-04T07:02:34.000Z" itemprop="datePublished">2015-09-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/跨域/">跨域</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/04/safe/kuayu/kuayu1/">跨域:（一）接口跨域</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>鄙人自封公司第一跨域解决大师，的确需要写一下关于跨域的事情。</p>
+<p>前端调试，跨域太常见了。如下图：<br><img src="https://loulanyijian.github.io/images/kuayu1.png" alt="chrome下跨域提示"><br>跨域的原因，是浏览器的安全机制，不允许跨域互相调用，会提高网站的安全性。</p>
+<p>前端跨域的最大模块，是ajax接口跨域</p>
+<h3 id="1、最简单的解决方法：jsonp"><a href="#1、最简单的解决方法：jsonp" class="headerlink" title="1、最简单的解决方法：jsonp"></a>1、最简单的解决方法：jsonp</h3><p>虽然jquery将jsonp封装到了ajax方法里面，但是底层的代码调用，完全不是一样。<br>jsonp的原理，就是通过script标签进行回调，原生的jsonp开发，会明显一些。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义好回调方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">qqq</span>(<span class="params">data</span>)</span>&#123;</div><div class="line"><span class="comment">// do something</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;script scr=<span class="string">'http://xxx.com?callback=qqq'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span>&gt;</div></pre></td></tr></table></figure></p>
+<p>也就是相当于，服务端返回的代码，使用了qqq包了起来，然后调用了上面定义的那个qqq方法，实现了数据的跨域调用。</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/04/safe/kuayu/kuayu1/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/09/04/safe/kuayu/kuayu1/" data-id="cj4gpfiop00j7gvc2iulznr05" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsonp/">jsonp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域/">跨域</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-seo/seo-sum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/31/seo/seo-sum/" class="article-date">
+  <time datetime="2015-07-31T07:02:34.000Z" itemprop="datePublished">2015-07-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SEO/">SEO</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/31/seo/seo-sum/">SEO优化总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="最根本的原则"><a href="#最根本的原则" class="headerlink" title="最根本的原则"></a>最根本的原则</h3><ul>
+<li>就是代码后端直出，不管是jsp、php、还是nodejs的直出，都OK，简单来说，就是右击查看源代码，可以看到dom结构</li>
+<li>如果是使用的模板引擎，只渲染了json数据到界面上，dom结构需要JS再行渲染的话，也是不行的</li>
+<li>iframe嵌套的，seo不会去抓</li>
+<li>JS渲染的，不会去抓</li>
+<li>嵌套的flash、图片，更不会去抓</li>
+</ul>
+<h3 id="网站布局优化"><a href="#网站布局优化" class="headerlink" title="网站布局优化"></a>网站布局优化</h3>
+        
+          <p class="article-more-link">
+            <a href="/2015/07/31/seo/seo-sum/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/07/31/seo/seo-sum/" data-id="cj4gpfik80071gvc2lki5vj87" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-seo/lantv-seo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/29/seo/lantv-seo/" class="article-date">
+  <time datetime="2015-07-29T07:02:34.000Z" itemprop="datePublished">2015-07-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SEO/">SEO</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/29/seo/lantv-seo/">蓝TV SEO优化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近开发了浙江广电的蓝TV项目，成功上线运行，网址<a href="http://tv.cztv.com/">http://tv.cztv.com/</a>。<br>合作的统计提供端——国双科技，提供一份需要SEO优化的文档，主要包括如下内容：</p>
+<h3 id="1、网站地图分类列表页Title及URL优化"><a href="#1、网站地图分类列表页Title及URL优化" class="headerlink" title="1、网站地图分类列表页Title及URL优化"></a>1、网站地图分类列表页Title及URL优化</h3><ul>
+<li>将<code>&lt;title&gt;综艺 -  - 中国蓝TV&lt;/title&gt;</code>修改为<code>&lt;title&gt;综艺-网站地图-中国蓝TV&lt;/title&gt;</code></li>
+<li><code>http://list.cztv.com/sitemap/c11_s_t_a_y_f_st_vt_ph_lg_tv_sp_md_o9_d_p.html</code> 这种URL过长，需要优化</li>
+</ul>
+<h3 id="2、专题页面URL优化（避免直接使用搜索URL作为页面URL）"><a href="#2、专题页面URL优化（避免直接使用搜索URL作为页面URL）" class="headerlink" title="2、专题页面URL优化（避免直接使用搜索URL作为页面URL）"></a>2、专题页面URL优化（避免直接使用搜索URL作为页面URL）</h3><ul>
+<li>将<code>http://so.cztv.com/pc/s?wd=中国梦想秀</code>替换为<code>http://tv.cztv.com/zongyi/zzmxx</code></li>
+</ul>
+<h3 id="3、播放页相关剧集内容可见性优化"><a href="#3、播放页相关剧集内容可见性优化" class="headerlink" title="3、播放页相关剧集内容可见性优化"></a>3、播放页相关剧集内容可见性优化</h3>
+        
+          <p class="article-more-link">
+            <a href="/2015/07/29/seo/lantv-seo/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/07/29/seo/lantv-seo/" data-id="cj4gpfijz006mgvc2b8avazqn" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端工具/sublime插件推荐" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/01/前端工具/sublime插件推荐/" class="article-date">
+  <time datetime="2015-07-01T07:02:34.000Z" itemprop="datePublished">2015-07-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端工具/">前端工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/01/前端工具/sublime插件推荐/">sublime插件推荐</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;从C、C++的学生时代，到刚工作的Java时代，又到现在的JS时代，使用了<code>VC6</code>、vs系列、<code>eclipse</code>、<code>webstorm</code>、<code>atom</code>等N多代码编辑器，最终因为速度与可玩性，选择了<code>sublime</code>。下面是根据自己的习惯，推荐常用的<code>sublime</code>插件。</p>
+<ul>
+<li><code>All Autocomplete</code></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;自动提示插件，但是不是像<code>webstorm</code>那样搜索全部的文件，这个只搜索现在打开的文件<br><img src="https://loulanyijian.github.io/images/st1.png" alt="All Autocomplete" style="width:50%"><br>
+        
+          <p class="article-more-link">
+            <a href="/2015/07/01/前端工具/sublime插件推荐/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/07/01/前端工具/sublime插件推荐/" data-id="cj4gpfilc008ygvc2hqrtjdy8" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端工具/">前端工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端工具/webstorm vs sublime" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/03/前端工具/webstorm vs sublime/" class="article-date">
+  <time datetime="2015-06-03T07:02:34.000Z" itemprop="datePublished">2015-06-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端工具/">前端工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/03/前端工具/webstorm vs sublime/">webstorm vs sublime</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>公司8g内存的惠普笔记本，带webstorm（后面简称为WS）已经带不动了，因为我经常打开N个功能用于跑代码。<br>于是，换回了之前使用的sublime。</p>
+<p>两款经典开发工具对比</p>
+<h3 id="功能齐全"><a href="#功能齐全" class="headerlink" title="功能齐全"></a>功能齐全</h3><p>WS完胜，sublime需要自己挨个去下载插件，去配置相关使用。<br>换句话说，WS是个IDE，sublime就是个代码编辑器</p>
+<h3 id="速度"><a href="#速度" class="headerlink" title="速度"></a>速度</h3><p>sublime完胜，sublime既没有自动保存，也没有自带的自动补全，更没有删除时的相关引用提示。</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/06/03/前端工具/webstorm vs sublime/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/06/03/前端工具/webstorm vs sublime/" data-id="cj4gpfilb008vgvc2jy1vodzk" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webstorm/">webstorm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端工具/">前端工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端工具/webstorm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/24/前端工具/webstorm/" class="article-date">
+  <time datetime="2015-05-24T07:02:34.000Z" itemprop="datePublished">2015-05-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端工具/">前端工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/24/前端工具/webstorm/">关于webstorm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近被大家推荐使用webstorm（后面简称为WS）来做前端开发，用了N久，总结如下：<br>首先是优点：</p>
+<h3 id="1、功能齐全"><a href="#1、功能齐全" class="headerlink" title="1、功能齐全"></a>1、功能齐全</h3><ul>
+<li>集成了N多有用的功能，集成了git、svn、ant、命令行等功能</li>
+<li>自动化提示优秀</li>
+<li>可以从某个文件的方法，点击至调用的方法中</li>
+<li>可以自动保存</li>
+<li>可以保存历史记录</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/24/前端工具/webstorm/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/05/24/前端工具/webstorm/" data-id="cj4gpfild0091gvc29sjro12y" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webstorm/">webstorm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端工具/">前端工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端工具/fiddler" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/05/前端工具/fiddler/" class="article-date">
+  <time datetime="2015-05-05T07:47:02.000Z" itemprop="datePublished">2015-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端工具/">前端工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/05/前端工具/fiddler/">前端开发利器之——fiddler</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近接触H5界面开发较多，也认识了一个前端开发调试利器——fiddler。</p>
+<h3 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h3><p>fiddler的一大重要功能就是抓包，类似于chrome的network，但是功能更加强大</p>
+<ul>
+<li>fiddler可以抓本电脑所有的网络请求</li>
+<li>fiddler抓包查看的细节更多、格式更全面</li>
+<li>fiddler可以使用多种自定义过滤的方式抓包</li>
+</ul>
+<h3 id="本地文件替换"><a href="#本地文件替换" class="headerlink" title="本地文件替换"></a>本地文件替换</h3>
+        
+          <p class="article-more-link">
+            <a href="/2015/05/05/前端工具/fiddler/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2015/05/05/前端工具/fiddler/" data-id="cj4gpfil6008kgvc2lf60ojpt" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fiddler/">fiddler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端工具/">前端工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-html5/browserDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/12/html5/browserDB/" class="article-date">
+  <time datetime="2014-12-12T07:02:34.000Z" itemprop="datePublished">2014-12-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/html5/">html5</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/12/html5/browserDB/">html5 本地数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>html5引入了localStorage来做缓存，又感觉只支持key-value的方式，有所局限，所以又添加了本地数据库的支持。</p>
+<h3 id="1、Web-SQL"><a href="#1、Web-SQL" class="headerlink" title="1、Web SQL"></a>1、Web SQL</h3><p>w3c最早提出的本地数据库方案是Web SQL，但是现在已经停止了对其的更新<br>功能要点，也是<strong>H5 Sqlite数据库三个核心API</strong>：</p>
+<ul>
+<li>打开数据库</li>
+<li>执行SQL语言<ul>
+<li>创建数据表table</li>
+<li>增加、修改、删除数据</li>
+<li>获取数据</li>
+<li>清空数据</li>
+</ul>
+</li>
+<li>事务处理</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2014/12/12/html5/browserDB/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2014/12/12/html5/browserDB/" data-id="cj4gpfiiv004tgvc20d3xb4le" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web-SQL/">Web SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/indexedDB/">indexedDB</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-html5/localstorage2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/12/html5/localstorage2/" class="article-date">
+  <time datetime="2014-11-12T07:02:34.000Z" itemprop="datePublished">2014-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/html5/">html5</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/12/html5/localstorage2/">localStorage 做性能优化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>localStorage作为cookie的替代品，可以对前端性能优化做一些文章。</p>
+<h3 id="缓存普通数据"><a href="#缓存普通数据" class="headerlink" title="缓存普通数据"></a>缓存普通数据</h3><p>由于不会被http请求带上，localStorage本事对性能就算优化了一层</p>
+<h3 id="缓存接口"><a href="#缓存接口" class="headerlink" title="缓存接口"></a>缓存接口</h3><p>这个业内使用的也比较多，对那些请求量比较大、而且改动不算频繁的接口，可以通过localStorage缓存到本地</p>
+<p>大体思路：</p>
+<ul>
+<li>第一次请求接口时，正常请求并存入localStorage，同时存入当前时间戳</li>
+<li>再次使用该接口时，对比当前时间与存入的时间戳，如果未到存储时间的话，直接从缓存中取数据</li>
+<li>如果时间超时，再次正常请求接口，并更新时间、接口内容到缓存</li>
+</ul>
+<p>下面是我封装了一个<code>getLocalOrRemote.js</code></p>
+        
+          <p class="article-more-link">
+            <a href="/2014/11/12/html5/localstorage2/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://loulanyijian.github.io/2014/11/12/html5/localstorage2/" data-id="cj4gpfijf005ogvc2rmlt1ghz" class="article-share-link bdsharebuttonbox" data-cmd="more">分享</a>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/localStorage/">localStorage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/性能/">性能</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/6/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SEO/">SEO</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/html5/">html5</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/koa2/">koa2</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue实践/">vue实践</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/交互心得/">交互心得</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/兼容性/">兼容性</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端书籍/">前端书籍</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端工具/">前端工具</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端招聘/">前端招聘</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端规范/">前端规范</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作总结/">工作总结</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术大杂烩/">技术大杂烩</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术架构/">技术架构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浏览器原理/">浏览器原理</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/跨域/">跨域</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目心路/">项目心路</a><span class="category-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CDN/">CDN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Firefox/">Firefox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/">H5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IE/">IE</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SEO/">SEO</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-SQL/">Web SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cookie/">cookie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eslint/">eslint</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fiddler/">fiddler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iframe/">iframe</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/indexedDB/">indexedDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsonp/">jsonp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/koa2/">koa2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/">localStorage</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/safari/">safari</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">svg</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue-cli/">vue-cli</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue-loader/">vue-loader</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wap/">wap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webstorm/">webstorm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/交互/">交互</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/兼容性/">兼容性</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端书籍/">前端书籍</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端团队管理/">前端团队管理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端工具/">前端工具</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/国际化/">国际化</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作总结/">工作总结</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作流程/">工作流程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术架构/">技术架构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接口/">接口</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/缓存/">缓存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跨域/">跨域</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CDN/" style="font-size: 10px;">CDN</a> <a href="/tags/Firefox/" style="font-size: 10px;">Firefox</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/IE/" style="font-size: 11.25px;">IE</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/SEO/" style="font-size: 12.5px;">SEO</a> <a href="/tags/Web-SQL/" style="font-size: 10px;">Web SQL</a> <a href="/tags/chrome/" style="font-size: 17.5px;">chrome</a> <a href="/tags/cookie/" style="font-size: 11.25px;">cookie</a> <a href="/tags/eslint/" style="font-size: 10px;">eslint</a> <a href="/tags/fiddler/" style="font-size: 10px;">fiddler</a> <a href="/tags/html5/" style="font-size: 13.75px;">html5</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/https/" style="font-size: 12.5px;">https</a> <a href="/tags/iframe/" style="font-size: 11.25px;">iframe</a> <a href="/tags/indexedDB/" style="font-size: 10px;">indexedDB</a> <a href="/tags/jsonp/" style="font-size: 10px;">jsonp</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/localStorage/" style="font-size: 11.25px;">localStorage</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/safari/" style="font-size: 10px;">safari</a> <a href="/tags/sublime/" style="font-size: 11.25px;">sublime</a> <a href="/tags/svg/" style="font-size: 10px;">svg</a> <a href="/tags/vue/" style="font-size: 16.25px;">vue</a> <a href="/tags/vue-cli/" style="font-size: 10px;">vue-cli</a> <a href="/tags/vue-loader/" style="font-size: 10px;">vue-loader</a> <a href="/tags/wap/" style="font-size: 10px;">wap</a> <a href="/tags/webpack/" style="font-size: 11.25px;">webpack</a> <a href="/tags/webstorm/" style="font-size: 11.25px;">webstorm</a> <a href="/tags/交互/" style="font-size: 11.25px;">交互</a> <a href="/tags/兼容性/" style="font-size: 16.25px;">兼容性</a> <a href="/tags/前端书籍/" style="font-size: 10px;">前端书籍</a> <a href="/tags/前端团队管理/" style="font-size: 10px;">前端团队管理</a> <a href="/tags/前端工具/" style="font-size: 18.75px;">前端工具</a> <a href="/tags/国际化/" style="font-size: 20px;">国际化</a> <a href="/tags/工作总结/" style="font-size: 11.25px;">工作总结</a> <a href="/tags/工作流程/" style="font-size: 10px;">工作流程</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/性能/" style="font-size: 13.75px;">性能</a> <a href="/tags/技术架构/" style="font-size: 10px;">技术架构</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/规范/" style="font-size: 18.75px;">规范</a> <a href="/tags/跨域/" style="font-size: 13.75px;">跨域</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">九月 2011</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/05/book/my/">-----我看过的前端书籍与点评</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/01/jiagou/jiagou/">-----乐视云大前端技术架构</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/speed/speed-all/">前端性能优化-脑图总结篇</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/15/jianrong/win-mac/">window与Mac系统兼容性问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/02/技术大杂烩/you/">为毛你的界面跟别人的都不一样？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhaosd<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="https://github.com/loulanyijian" class="mobile-nav-link">楼兰一剑的github</a>
+  
+</nav>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="totop" style="position:fixed;bottom:200px;right:30px;cursor: pointer;z-index:99999;padding:30px;border:1px solid #262a30;background:rgba(238, 238, 238,0.7)">
+	<a title="返回顶部">返回顶部</a>
+</div>
+<script src="/js/totop.js"></script>
+  </div>
+</body>
+</html>
