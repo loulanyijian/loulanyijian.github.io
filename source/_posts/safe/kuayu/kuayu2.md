@@ -2,7 +2,7 @@
 title: 跨域:（二）cookie、canvas等跨域
 date: 2015-09-05 15:02:34
 categories: 跨域
-tags: [跨域, canvas, iframe]
+tags: [跨域, iframe]
 ---
 
 前端跨域，除了接口的跨域之外，还有其余N多形式的跨域

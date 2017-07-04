@@ -1,8 +1,8 @@
 ---
 title: koa2技术架构-脑图版
 date: 2017-04-06 15:02:34
-categories: [nodejs,koa2]
-tags: [nodejs,koa2]
+categories: [koa2]
+tags: [koa2]
 ---
 直接先上图。
 ![koa2技术架构-楼兰一剑](https://loulanyijian.github.io/images/koa2.svg)

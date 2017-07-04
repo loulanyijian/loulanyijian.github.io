@@ -4,8 +4,8 @@
 
 # Site
 title: 楼兰一剑的道场
-subtitle: 施主，请留步……本人楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范制定大师、前端性能优化大师、跨域解决大师、html5技术先驱、前端安全专家、vuejs第一人、SEO第一人……
-description: 楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，忝为公司大前端首席架构师、第一交互设计师、大前端规范大师、前端性能优化大师、跨域解决大师、SEO第一人……等绝对的猛人
+subtitle: 施主，请留步……本人楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，公司大前端首席架构师、第一交互设计师、大前端规范制定大师、前端性能优化大师、跨域解决大师、html5技术先驱、前端安全专家、vuejs第一人、SEO第一人……以上都跟我没关系，现在求一份互联网工作端茶倒水工作
+description: 施主，请留步……本人楼兰一剑，历史、地理、人文三绝，迫于生计，委身写JS，公司大前端首席架构师、第一交互设计师、大前端规范制定大师、前端性能优化大师、跨域解决大师、html5技术先驱、前端安全专家、vuejs第一人、SEO第一人……以上都跟我没关系，现在求一份互联网工作端茶倒水工作
 author: zhaosd
 language: zh-CN
 timezone:
@@ -57,7 +57,7 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 200
+per_page: 20
 pagination_dir: page
 
 # Extensions

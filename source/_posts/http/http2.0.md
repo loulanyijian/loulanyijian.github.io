@@ -2,7 +2,7 @@
 title: http 2.0 前瞻
 date: 2016-08-12 15:02:34
 categories: http
-tags: [http,http 2.0]
+tags: [http]
 ---
 
 虽然http 2.0暂时还未大面积推广使用，但是大家已经看到了未来的光明。

@@ -2,7 +2,7 @@
 title: http 1.0 vs 1.1
 date: 2016-08-11 15:02:34
 categories: http
-tags: [http,http 1.0,http 1.1]
+tags: [http]
 ---
 
 最近研究《图解http》一书，收获颇多，现总结一下http 1.0 与 1.1的区别，另参考了网上的资料。

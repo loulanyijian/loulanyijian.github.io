@@ -2,7 +2,7 @@
 title: 我使用过的JS类库集合
 date: 2017-02-07 15:02:34
 categories: [技术大杂烩]
-tags: [jquery,extJS,vue,angular,react]
+tags: []
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;最近要做saas的运营系统，做技术储备的时候，仔细调研了reactJS，看看是不是再玩个新的技术。

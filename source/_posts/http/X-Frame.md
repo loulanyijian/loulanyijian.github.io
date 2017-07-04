@@ -2,7 +2,7 @@
 title: X-Frame-Options 与 iframe嵌套
 date: 2017-05-01 15:02:34
 categories: [http]
-tags: [http,response,iframe]
+tags: [iframe]
 ---
 
 莫名其妙碰到一个bug，我们后台的一个界面，在我们外层界面使用iframe嵌套的话，该界面会显示空白，没发出任何请求，而单独打开该界面的话，立马正常显示。

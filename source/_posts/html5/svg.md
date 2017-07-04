@@ -2,7 +2,7 @@
 title: svg图标库以及与icon font对比
 date: 2016-05-10 15:02:34
 categories: html5
-tags: [html5,svg,icon font]
+tags: [html5,svg]
 ---
 
 新版官网上线已有一段时间了，这次改版的风格是尽可能的使用图片表达，其中用到了大量的图标。
@@ -16,6 +16,8 @@ tags: [html5,svg,icon font]
 那么为什么我们要用svg font？
 
 ### 一、渲染方式
+
+<!-- more -->
 
 * icon font：采用的是字体渲染。icon font在一倍屏幕下渲染效果并不好，在细节部分锯齿还是很明显的（请看下图对比）。因为浏览器认为其是文本，所以会对其使用抗锯齿，尤其在火狐浏览器上的渲染比在其它浏览器上的渲染要更重些。这会让整个页面显得不好看且笨重。（即便是加henting hack，路径也会有瑕疵）。
 

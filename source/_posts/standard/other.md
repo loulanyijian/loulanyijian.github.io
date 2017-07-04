@@ -18,6 +18,9 @@ demo
 *.zip
 ```
 ### 2、readme
+
+<!-- more -->
+
 * name
 * 简介
 * 作者
