@@ -7,7 +7,7 @@ date: 2017-07-05 10:21:59
 ![大前端工具集-楼兰一剑](https://loulanyijian.github.io/images/fetools.svg)
 ![前端性能优化总结-楼兰一剑](https://loulanyijian.github.io/images/speed.svg)
 ![koa2功能列表-楼兰一剑](https://loulanyijian.github.io/images/koa2.svg)
-![前端国际化-楼兰一剑](https://loulanyijian.github.io/images/guojihua.svg)
+![前端国际化-楼兰一剑](https://loulanyijian.github.io/images/goujihua.svg)
 ![SEO-楼兰一剑](https://loulanyijian.github.io/images/SEO.svg)
 ![H5站开发注意点-楼兰一剑](https://loulanyijian.github.io/images/wap.svg)
 

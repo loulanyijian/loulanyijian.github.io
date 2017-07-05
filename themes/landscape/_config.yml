@@ -4,9 +4,9 @@ menu:
   归档: /archives
   楼兰一剑的github : https://github.com/loulanyijian
   我的脑图 : /huizong/naotu.html
-  我的架构图 : /huizong
-  我的流程图 : /huizong/liucheng.html
-  我的PPT : /huizong/naotu.html
+  # 我的架构图 : /huizong
+  # 我的流程图 : /huizong/liucheng.html
+  # 我的PPT : /huizong/ppt.html
   vue组件库-liveUI : http://106.38.226.66/liveUI/#/
   关于我 : /about
 
